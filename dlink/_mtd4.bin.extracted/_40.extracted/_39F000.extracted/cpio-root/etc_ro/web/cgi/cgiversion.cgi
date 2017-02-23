@@ -1,1 +1,0 @@
-CGIVersion=%%CGIVersion();%%

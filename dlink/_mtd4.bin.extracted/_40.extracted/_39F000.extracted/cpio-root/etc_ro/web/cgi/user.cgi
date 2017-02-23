@@ -1,1 +1,0 @@
-AccessControlEnable=%%AccessControlEnable();%%
