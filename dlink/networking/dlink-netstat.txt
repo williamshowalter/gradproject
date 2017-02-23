@@ -1,0 +1,16 @@
+# netstat -tulpn
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1799/alphapd        
+tcp        2      0 192.168.5.179:8819      0.0.0.0:*               LISTEN      1889/udev           
+tcp        0      0 0.0.0.0:23              0.0.0.0:*               LISTEN      1965/telnetd        
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      1799/alphapd        
+udp        0      0 0.0.0.0:62976           0.0.0.0:*                           1914/lanconfig      
+udp    46656      0 0.0.0.0:2061            0.0.0.0:*                           1889/udev           
+udp        0      0 0.0.0.0:2062            0.0.0.0:*                           1925/mDNSResponder  
+udp    46656      0 0.0.0.0:2063            0.0.0.0:*                           1953/signalc        
+udp        0      0 0.0.0.0:69              0.0.0.0:*                           1915/tftpupload     
+udp        0      0 0.0.0.0:5978            0.0.0.0:*                           1952/dcp            
+udp        0      0 0.0.0.0:5353            0.0.0.0:*                           1925/mDNSResponder  
+udp        0      0 0.0.0.0:1900            0.0.0.0:*                           1889/udev           
+
