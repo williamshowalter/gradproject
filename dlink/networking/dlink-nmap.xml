@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.40 scan initiated Mon Feb 20 21:43:05 2017 as: nmap -p 1-65535 -T4 -sU -A -oN dlink-nmap.txt -sC -oX dlink-nmap.xml 192.168.5.179 -->
+<nmaprun scanner="nmap" args="nmap -p 1-65535 -T4 -sU -A -oN dlink-nmap.txt -sC -oX dlink-nmap.xml 192.168.5.179" start="1487648585" startstr="Mon Feb 20 21:43:05 2017" version="7.40" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="UDP Scan" time="1487649216" percent="1.03" remaining="60633" etc="1487709848"/>
+<taskprogress task="UDP Scan" time="1487649331" percent="1.20" remaining="61534" etc="1487710864"/>
+<taskprogress task="UDP Scan" time="1487649500" percent="1.45" remaining="62121" etc="1487711620"/>
+<taskprogress task="UDP Scan" time="1487649504" percent="1.46" remaining="62118" etc="1487711621"/>
+<taskprogress task="UDP Scan" time="1487649505" percent="1.46" remaining="62176" etc="1487711680"/>
+<taskprogress task="UDP Scan" time="1487649507" percent="1.46" remaining="62179" etc="1487711686"/>
+<taskprogress task="UDP Scan" time="1487649799" percent="1.88" remaining="63207" etc="1487713006"/>
+<taskprogress task="UDP Scan" time="1487650036" percent="2.24" remaining="63344" etc="1487713380"/>
+<taskprogress task="UDP Scan" time="1487651152" percent="3.87" remaining="63811" etc="1487714962"/>
+<taskprogress task="UDP Scan" time="1487651155" percent="3.87" remaining="63855" etc="1487715010"/>
+<taskprogress task="UDP Scan" time="1487651155" percent="3.87" remaining="63829" etc="1487714984"/>
+<host starttime="1487648585" endtime="1487719466"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.5.179" addrtype="ipv4"/>
+<address addr="28:10:7B:2D:1D:22" addrtype="mac" vendor="D-Link International"/>
+<hostnames>
+<hostname name="DCS-933L" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65484">
+<extrareasons reason="port-unreaches" count="65484"/>
+</extraports>
+<extraports state="open|filtered" count="50">
+<extrareasons reason="no-responses" count="50"/>
+</extraports>
+<port protocol="udp" portid="5353"><state state="open" reason="udp-response" reason_ttl="255"/><service name="mdns" product="DNS-based service discovery" method="probed" conf="10"/><script id="dns-service-discovery" output="&#xa;  80/tcp http&#xa;    Address=192.168.5.179&#xa;"/></port>
+</ports>
+<os><portused state="closed" proto="udp" portid="1"/>
+</os>
+<distance value="1"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.5.179" rtt="0.58" host="DCS-933L"/>
+</trace>
+<times srtt="579" rttvar="116" to="100000"/>
+</host>
+<runstats><finished time="1487719466" timestr="Tue Feb 21 17:24:26 2017" elapsed="70881.24" summary="Nmap done at Tue Feb 21 17:24:26 2017; 1 IP address (1 host up) scanned in 70881.24 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

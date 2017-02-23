@@ -1,0 +1,26 @@
+# Nmap 7.40 scan initiated Tue Feb 21 19:33:00 2017 as: nmap -p 1-65535 -T4 -A -oN dlink-nmap-tcp.txt -sC -oX dlink-nmap-tcp.xml 192.168.5.179
+Nmap scan report for DCS-933L (192.168.5.179)
+Host is up (0.00084s latency).
+Not shown: 65532 closed ports
+PORT     STATE SERVICE    VERSION
+80/tcp   open  http       D-Link DCS-933L webcam http interface
+| http-auth: 
+| HTTP/1.0 401 Authorization Required\x0D
+|_  Basic realm=DCS-933L
+|_http-title: Site doesn't have a title (text/html).
+443/tcp  open  ssl/https?
+8819/tcp open  tcpwrapped
+MAC Address: 28:10:7B:2D:1D:22 (D-Link International)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.13 - 2.6.32
+Network Distance: 1 hop
+Service Info: Device: webcam; CPE: cpe:/h:dlink:dcs-933l
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.84 ms DCS-933L (192.168.5.179)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Feb 21 19:34:57 2017 -- 1 IP address (1 host up) scanned in 117.19 seconds

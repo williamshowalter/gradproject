@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.40 scan initiated Mon Feb 20 21:13:31 2017 as: nmap -p 1-65535 -T4 -A -oN pogoplug-nmap.txt -sC -oX pogoplug-nmap.xml 192.168.5.180 -->
+<nmaprun scanner="nmap" args="nmap -p 1-65535 -T4 -A -oN pogoplug-nmap.txt -sC -oX pogoplug-nmap.xml 192.168.5.180" start="1487646811" startstr="Mon Feb 20 21:13:31 2017" version="7.40" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1487646811" endtime="1487646843"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.5.180" addrtype="ipv4"/>
+<address addr="00:25:31:01:C3:8B" addrtype="mac" vendor="Cloud Engines"/>
+<hostnames>
+<hostname name="PogoplugPro" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="resets" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="HBHTTP" version="2.5.8" extrainfo="Pogoplug Pro NAS device" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-server-header" output="HBHTTP POGOPRO - 2.5.8 - Linux"><elem>HBHTTP POGOPRO - 2.5.8 - Linux</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title."></script></port>
+<port protocol="tcp" portid="3333"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="HBHTTP" version="2.5.8" extrainfo="Pogoplug Pro NAS device" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-server-header" output="HBHTTP POGOPRO - 2.5.8 - Linux"><elem>HBHTTP POGOPRO - 2.5.8 - Linux</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title."></script></port>
+<port protocol="tcp" portid="3334"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="directv-web" servicefp="SF-Port3334-TCP:V=7.40%I=7%D=2/20%Time=58ABB069%P=x86_64-pc-linux-gnu%r(GetRequest,8D,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20HBHTTP\x20POGOPRO\x20-\x202\.5\.8\x20-\x20Linux\r\nDate:\x20Tue,\x2021\x20Feb\x202017\x2003:13:45\x20GMT\r\nConnection:\x20close\r\n\r\n&quot;)%r(HTTPOptions,8D,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20HBHTTP\x20POGOPRO\x20-\x202\.5\.8\x20-\x20Linux\r\nDate:\x20Tue,\x2021\x20Feb\x202017\x2003:13:45\x20GMT\r\nConnection:\x20close\r\n\r\n&quot;)%r(RTSPRequest,8D,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20HBHTTP\x20POGOPRO\x20-\x202\.5\.8\x20-\x20Linux\r\nDate:\x20Tue,\x2021\x20Feb\x202017\x2003:13:45\x20GMT\r\nConnection:\x20close\r\n\r\n&quot;)%r(FourOhFourRequest,8D,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20HBHTTP\x20POGOPRO\x20-\x202\.5\.8\x20-\x20Linux\r\nDate:\x20Tue,\x2021\x20Feb\x202017\x2003:13:53\x20GMT\r\nConnection:\x20close\r\n\r\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Length: 0&#xa;    Server: HBHTTP POGOPRO - 2.5.8 - Linux&#xa;    Date: Tue, 21 Feb 2017 03:13:53 GMT&#xa;    Connection: close&#xa;  GetRequest, HTTPOptions, RTSPRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Length: 0&#xa;    Server: HBHTTP POGOPRO - 2.5.8 - Linux&#xa;    Date: Tue, 21 Feb 2017 03:13:45 GMT&#xa;    Connection: close"><elem key="FourOhFourRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Length: 0&#xa;    Server: HBHTTP POGOPRO - 2.5.8 - Linux&#xa;    Date: Tue, 21 Feb 2017 03:13:53 GMT&#xa;    Connection: close</elem>
+<elem key="GetRequest, HTTPOptions, RTSPRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Length: 0&#xa;    Server: HBHTTP POGOPRO - 2.5.8 - Linux&#xa;    Date: Tue, 21 Feb 2017 03:13:45 GMT&#xa;    Connection: close</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="32181"/>
+<osmatch name="Linux 2.6.19 - 2.6.36" accuracy="100" line="47628">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="14421" lastboot="Mon Feb 20 17:13:42 2017"/>
+<distance value="1"/>
+<tcpsequence index="204" difficulty="Good luck!" values="DF6F0270,DF0A3F2E,DF49B3BD,E027D9A2,DFF730EE,E035F891"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="100HZ" values="16004C,160056,160060,16006B,160075,16007F"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.5.180" rtt="0.41" host="PogoplugPro"/>
+</trace>
+<times srtt="412" rttvar="402" to="100000"/>
+</host>
+<runstats><finished time="1487646843" timestr="Mon Feb 20 21:14:03 2017" elapsed="31.71" summary="Nmap done at Mon Feb 20 21:14:03 2017; 1 IP address (1 host up) scanned in 31.71 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

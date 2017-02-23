@@ -1,0 +1,131 @@
+# Nmap 7.40 scan initiated Tue Feb 21 19:34:06 2017 as: nmap -p 1-65535 -T4 -A -oN momentum-nmap-tcp.txt -sC -oX momentum-nmap-tcp.xml 192.168.5.162
+Nmap scan report for Ipcam (192.168.5.162)
+Host is up (0.0091s latency).
+Not shown: 65526 closed ports
+PORT      STATE SERVICE              VERSION
+23/tcp    open  telnet               security DVR telnetd (many brands)
+80/tcp    open  tcpwrapped
+|_http-title: Did not follow redirect to http://Ipcam:8001/
+554/tcp   open  rtsp
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: TAS-Tech IPCam
+|     Date: Thu, 22 Feb 117 01:34:43 GMT
+|     Content-Length: 9
+|     Cache-Control: no-cache
+|     Found
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: TAS-Tech IPCam
+|     Date: Thu, 22 Feb 117 01:34:28 GMT
+|     Content-Length: 9
+|     Cache-Control: no-cache
+|     Found
+|   HTTPOptions: 
+|     HTTP/1.1 405 Method Not Allowed
+|     Server: TAS-Tech IPCam
+|     Date: Thu, 22 Feb 117 01:34:38 GMT
+|     Content-Length: 18
+|     Cache-Control: no-cache
+|     Method Not Allowed
+|   RTSPRequest: 
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Server: TAS-Tech Streaming Server V100R001
+|_    Public: DESCRIBE, SET_PARAMETER, SETUP, TEARDOWN, PAUSE, PLAY
+|_rtsp-methods: DESCRIBE, SET_PARAMETER, SETUP, TEARDOWN, PAUSE, PLAY
+3201/tcp  open  cpq-tasksmart?
+8001/tcp  open  rtsp
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: TAS-Tech IPCam
+|     Date: Thu, 22 Feb 117 01:34:33 GMT
+|     Content-Length: 9
+|     Cache-Control: no-cache
+|     Found
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: TAS-Tech IPCam
+|     Date: Thu, 22 Feb 117 01:34:28 GMT
+|     Content-Length: 9
+|     Cache-Control: no-cache
+|     Found
+|   HTTPOptions: 
+|     HTTP/1.1 405 Method Not Allowed
+|     Server: TAS-Tech IPCam
+|     Date: Thu, 22 Feb 117 01:34:38 GMT
+|     Content-Length: 18
+|     Cache-Control: no-cache
+|     Method Not Allowed
+|   RTSPRequest: 
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Server: TAS-Tech Streaming Server V100R001
+|_    Public: DESCRIBE, SET_PARAMETER, SETUP, TEARDOWN, PAUSE, PLAY
+|_rtsp-methods: DESCRIBE, SET_PARAMETER, SETUP, TEARDOWN, PAUSE, PLAY
+24102/tcp open  tcpwrapped
+34102/tcp open  tcpwrapped
+54273/tcp open  unknown
+| fingerprint-strings: 
+|   GenericLines: 
+|     20:34:25 2017
+|   NULL: 
+|_    20:34:22 2017
+61440/tcp open  netprowler-manager2?
+| fingerprint-strings: 
+|   GenericLines, NULL: 
+|_    20:34:22 2017
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.40%I=7%D=2/21%Time=58ACEAA7%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,8B,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20TAS-Tech\x20
+SF:IPCam\r\nDate:\x20Thu,\x2022\x20Feb\x20117\x2001:34:28\x20GMT\r\nConten
+SF:t-Length:\x209\r\nCache-Control:\x20no-cache\r\n\r\nNot\x20Found")%r(RT
+SF:SPRequest,87,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nServer:\x20TAS-Te
+SF:ch\x20Streaming\x20Server\x20V100R001\r\nPublic:\x20DESCRIBE,\x20SET_PA
+SF:RAMETER,\x20SETUP,\x20TEARDOWN,\x20PAUSE,\x20PLAY\r\n\r\n")%r(HTTPOptio
+SF:ns,9E,"HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\nServer:\x20TAS-T
+SF:ech\x20IPCam\r\nDate:\x20Thu,\x2022\x20Feb\x20117\x2001:34:38\x20GMT\r\
+SF:nContent-Length:\x2018\r\nCache-Control:\x20no-cache\r\n\r\nMethod\x20N
+SF:ot\x20Allowed")%r(FourOhFourRequest,8B,"HTTP/1\.1\x20404\x20Not\x20Foun
+SF:d\r\nServer:\x20TAS-Tech\x20IPCam\r\nDate:\x20Thu,\x2022\x20Feb\x20117\
+SF:x2001:34:43\x20GMT\r\nContent-Length:\x209\r\nCache-Control:\x20no-cach
+SF:e\r\n\r\nNot\x20Found");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8001-TCP:V=7.40%I=7%D=2/21%Time=58ACEAA7%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,8B,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20TAS-Tech\x2
+SF:0IPCam\r\nDate:\x20Thu,\x2022\x20Feb\x20117\x2001:34:28\x20GMT\r\nConte
+SF:nt-Length:\x209\r\nCache-Control:\x20no-cache\r\n\r\nNot\x20Found")%r(F
+SF:ourOhFourRequest,8B,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20TAS
+SF:-Tech\x20IPCam\r\nDate:\x20Thu,\x2022\x20Feb\x20117\x2001:34:33\x20GMT\
+SF:r\nContent-Length:\x209\r\nCache-Control:\x20no-cache\r\n\r\nNot\x20Fou
+SF:nd")%r(HTTPOptions,9E,"HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\n
+SF:Server:\x20TAS-Tech\x20IPCam\r\nDate:\x20Thu,\x2022\x20Feb\x20117\x2001
+SF::34:38\x20GMT\r\nContent-Length:\x2018\r\nCache-Control:\x20no-cache\r\
+SF:n\r\nMethod\x20Not\x20Allowed")%r(RTSPRequest,87,"RTSP/1\.0\x20200\x20O
+SF:K\r\nCSeq:\x200\r\nServer:\x20TAS-Tech\x20Streaming\x20Server\x20V100R0
+SF:01\r\nPublic:\x20DESCRIBE,\x20SET_PARAMETER,\x20SETUP,\x20TEARDOWN,\x20
+SF:PAUSE,\x20PLAY\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port54273-TCP:V=7.40%I=7%D=2/21%Time=58ACEAA0%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,1D,"\0\0\0\x1dTue\x20Feb\x2021\x2020:34:22\x202017\n")%r(GenericLin
+SF:es,1D,"\0\0\0\x1dTue\x20Feb\x2021\x2020:34:25\x202017\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port61440-TCP:V=7.40%I=7%D=2/21%Time=58ACEAA2%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,1D,"\0\0\0\x1dTue\x20Feb\x2021\x2020:34:22\x202017\n")%r(GenericLin
+SF:es,1D,"\0\0\0\x1dTue\x20Feb\x2021\x2020:34:22\x202017\n");
+MAC Address: 3C:33:00:CC:77:86 (Shenzhen Bilian electronic)
+Device type: general purpose
+Running: Linux 2.6.X|3.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:3
+OS details: Linux 2.6.32 - 3.5
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   9.13 ms Ipcam (192.168.5.162)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Feb 21 19:35:00 2017 -- 1 IP address (1 host up) scanned in 54.12 seconds

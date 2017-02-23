@@ -1,0 +1,19 @@
+# Nmap 7.40 scan initiated Mon Feb 20 21:43:05 2017 as: nmap -p 1-65535 -T4 -sU -A -oN dlink-nmap.txt -sC -oX dlink-nmap.xml 192.168.5.179
+Nmap scan report for DCS-933L (192.168.5.179)
+Host is up (0.00058s latency).
+Not shown: 65484 closed ports, 50 open|filtered ports
+PORT     STATE SERVICE VERSION
+5353/udp open  mdns    DNS-based service discovery
+| dns-service-discovery: 
+|   80/tcp http
+|_    Address=192.168.5.179
+MAC Address: 28:10:7B:2D:1D:22 (D-Link International)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.58 ms DCS-933L (192.168.5.179)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Feb 21 17:24:26 2017 -- 1 IP address (1 host up) scanned in 70881.24 seconds

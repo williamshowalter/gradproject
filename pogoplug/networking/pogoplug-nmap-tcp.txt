@@ -1,0 +1,54 @@
+# Nmap 7.40 scan initiated Tue Feb 21 19:33:29 2017 as: nmap -p 1-65535 -T4 -A -oN pogoplug-nmap-tcp.txt -sC -oX pogoplug-nmap-tcp.xml 192.168.5.180
+Nmap scan report for PogoplugPro (192.168.5.180)
+Host is up (0.00035s latency).
+Not shown: 65532 closed ports
+PORT     STATE SERVICE      VERSION
+80/tcp   open  http         HBHTTP 2.5.8 (Pogoplug Pro NAS device)
+|_http-server-header: HBHTTP POGOPRO - 2.5.8 - Linux
+|_http-title: Site doesn't have a title.
+3333/tcp open  http         HBHTTP 2.5.8 (Pogoplug Pro NAS device)
+|_http-server-header: HBHTTP POGOPRO - 2.5.8 - Linux
+|_http-title: Site doesn't have a title.
+3334/tcp open  directv-web?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 0
+|     Server: HBHTTP POGOPRO - 2.5.8 - Linux
+|     Date: Wed, 22 Feb 2017 01:33:50 GMT
+|     Connection: close
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 0
+|     Server: HBHTTP POGOPRO - 2.5.8 - Linux
+|     Date: Wed, 22 Feb 2017 01:33:43 GMT
+|_    Connection: close
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3334-TCP:V=7.40%I=7%D=2/21%Time=58ACEA77%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,8D,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r
+SF:\nServer:\x20HBHTTP\x20POGOPRO\x20-\x202\.5\.8\x20-\x20Linux\r\nDate:\x
+SF:20Wed,\x2022\x20Feb\x202017\x2001:33:43\x20GMT\r\nConnection:\x20close\
+SF:r\n\r\n")%r(HTTPOptions,8D,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent
+SF:-Length:\x200\r\nServer:\x20HBHTTP\x20POGOPRO\x20-\x202\.5\.8\x20-\x20L
+SF:inux\r\nDate:\x20Wed,\x2022\x20Feb\x202017\x2001:33:43\x20GMT\r\nConnec
+SF:tion:\x20close\r\n\r\n")%r(RTSPRequest,8D,"HTTP/1\.1\x20404\x20Not\x20F
+SF:ound\r\nContent-Length:\x200\r\nServer:\x20HBHTTP\x20POGOPRO\x20-\x202\
+SF:.5\.8\x20-\x20Linux\r\nDate:\x20Wed,\x2022\x20Feb\x202017\x2001:33:43\x
+SF:20GMT\r\nConnection:\x20close\r\n\r\n")%r(FourOhFourRequest,8D,"HTTP/1\
+SF:.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20HBHTTP\
+SF:x20POGOPRO\x20-\x202\.5\.8\x20-\x20Linux\r\nDate:\x20Wed,\x2022\x20Feb\
+SF:x202017\x2001:33:50\x20GMT\r\nConnection:\x20close\r\n\r\n");
+MAC Address: 00:25:31:01:C3:8B (Cloud Engines)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.19 - 2.6.36
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.35 ms PogoplugPro (192.168.5.180)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Feb 21 19:34:00 2017 -- 1 IP address (1 host up) scanned in 31.79 seconds

@@ -1,0 +1,60 @@
+
+# 
+
+ov780 -I -O 1908 -C 3 -S 2 -P0 140101 -P1 071847
+
+ov780 -I -O 1908 -C 3 -S 2 -P0 140101 -P1 101847
+
+ov780 -I -O 1908 -C 3 -S 2 -P0 140101 -P1 131847
+mDNSResponder: DNS Message too short
+Jan  1 13:44:00 mDNSResponder: DNS Message too short
+mDNSResponder: DNS Message too short
+Jan  1 13:44:01 mDNSResponder: DNS Message too short
+mDNSResponder: DNS Message too short
+Jan  1 13:44:02 mDNSResponder: DNS Message too short
+mDNSResponder: DNS Message too short
+Jan  1 13:44:03 mDNSResponder: DNS Message too short
+mDNSResponder: DNS Message too short
+Jan  1 13:44:04 mDNSResponder: DNS Message too short
+mDNSResponder: DNS Message too short
+Jan  1 13:44:05 mDNSResponder: DNS Message too short
+mDNSResponder: DNS Message too short
+Jan  1 13:44:05 mDNSResponder: DNS Message too short
+
+ov780 -I -O 1908 -C 3 -S 2 -P0 140101 -P1 161847
+
+ov780 -I -O 1908 -C 3 -S 2 -P0 140101 -P1 191847
+peer socket closed: Success
+peer socket closed: Success
+peer socket closed: Success
+peer socket closed: Success
+peer socket closed: Success
+peer socket closed: Success
+peer socket closed: Success
+
+ov780 -I -O 1908 -C 3 -S 2 -P0 140101 -P1 221847
+mDNSResponder: Unknown DNS packet type 1D13 from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+Jan  2 00:12:09 mDNSResponder: Unknown DNS packet type 1D13 from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+mDNSResponder: Unknown DNS packet type 1000 from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+Jan  2 00:12:19 mDNSResponder: Unknown DNS packet type 1000 from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+mDNSResponder: DNS Message too short
+Jan  2 00:12:29 mDNSResponder: DNS Message too short
+mDNSResponder: Unknown DNS packet type 5449 from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+Jan  2 00:12:34 mDNSResponder: Unknown DNS packet type 5449 from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+mDNSResponder: DNS Message too short
+Jan  2 00:12:41 mDNSResponder: DNS Message too short
+mDNSResponder: DNS Message too short
+Jan  2 00:13:01 mDNSResponder: DNS Message too short
+mDNSResponder: Unknown DNS packet type 6E30 from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+Jan  2 00:13:21 mDNSResponder: Unknown DNS packet type 6E30 from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+mDNSResponder: Unknown DNS packet type 5000 from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+Jan  2 00:13:31 mDNSResponder: Unknown DNS packet type 5000 from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+mDNSResponder: Unknown DNS packet type FF00 from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+Jan  2 00:13:36 mDNSResponder: Unknown DNS packet type FF00 from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+mDNSResponder: Unknown DNS packet type C19C from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+Jan  2 00:13:41 mDNSResponder: Unknown DNS packet type C19C from 192.168.5.212  :42196 to 192.168.5.179  :5353  on 00000000 (ignored)
+mDNSResponder: Unknown DNS packet type 8F2C from 192.168.5.212  :493   to 192.168.5.179  :5353  on 00000000 (ignored)
+Jan  2 00:15:16 mDNSResponder: Unknown DNS packet type 8F2C from 192.168.5.212  :493   to 192.168.5.179  :53
+
+ov780 -I -O 1908 -C 3 -S 2 -P0 140102 -P1 011847
+# cat udp[J# cat tcp[J# cat netstat[J# ls[J# cd ..[J# cat ip_conntrack [J# ls[J# cd stat/[J# ls[J# cat ip_conntrack [J# cd ..[J# ls[J  

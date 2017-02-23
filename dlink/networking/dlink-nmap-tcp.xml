@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.40 scan initiated Tue Feb 21 19:33:00 2017 as: nmap -p 1-65535 -T4 -A -oN dlink-nmap-tcp.txt -sC -oX dlink-nmap-tcp.xml 192.168.5.179 -->
+<nmaprun scanner="nmap" args="nmap -p 1-65535 -T4 -A -oN dlink-nmap-tcp.txt -sC -oX dlink-nmap-tcp.xml 192.168.5.179" start="1487727180" startstr="Tue Feb 21 19:33:00 2017" version="7.40" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1487727180" endtime="1487727297"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.5.179" addrtype="ipv4"/>
+<address addr="28:10:7B:2D:1D:22" addrtype="mac" vendor="D-Link International"/>
+<hostnames>
+<hostname name="DCS-933L" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="resets" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="D-Link DCS-933L webcam http interface" devicetype="webcam" method="probed" conf="10"><cpe>cpe:/h:dlink:dcs-933l</cpe></service><script id="http-auth" output="&#xa;HTTP/1.0 401 Authorization Required\x0D&#xa;  Basic realm=DCS-933L&#xa;"><table>
+<table key="params">
+<elem key="realm">DCS-933L</elem>
+</table>
+<elem key="scheme">Basic</elem>
+</table>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" tunnel="ssl" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8819"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="40989"/>
+<osmatch name="Linux 2.6.13 - 2.6.32" accuracy="100" line="45082">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="94777" lastboot="Mon Feb 20 17:15:20 2017"/>
+<distance value="1"/>
+<tcpsequence index="206" difficulty="Good luck!" values="BA52E2AF,BA63E170,B9B86BA0,BA76D1A3,B9A129CB,BA90D40D"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="16AA3F4,16AA40D,16AA427,16AA440,16AA459,16AA472"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.5.179" rtt="0.84" host="DCS-933L"/>
+</trace>
+<times srtt="838" rttvar="552" to="100000"/>
+</host>
+<runstats><finished time="1487727297" timestr="Tue Feb 21 19:34:57 2017" elapsed="117.19" summary="Nmap done at Tue Feb 21 19:34:57 2017; 1 IP address (1 host up) scanned in 117.19 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

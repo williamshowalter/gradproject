@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.40 scan initiated Mon Feb 20 21:47:27 2017 as: nmap -p 1-65535 -T4 -sU -A -oN momentum-nmap.txt -sC -oX momentum-nmap.xml 192.168.5.162 -->
+<nmaprun scanner="nmap" args="nmap -p 1-65535 -T4 -sU -A -oN momentum-nmap.txt -sC -oX momentum-nmap.xml 192.168.5.162" start="1487648847" startstr="Mon Feb 20 21:47:27 2017" version="7.40" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="UDP Scan" time="1487649788" percent="1.44" remaining="64546" etc="1487714333"/>
+<taskprogress task="UDP Scan" time="1487649794" percent="1.44" remaining="64590" etc="1487714383"/>
+<taskprogress task="UDP Scan" time="1487650045" percent="1.81" remaining="64962" etc="1487715007"/>
+<taskprogress task="UDP Scan" time="1487651161" percent="3.43" remaining="65109" etc="1487716269"/>
+<host starttime="1487648847" endtime="1487720396"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.5.162" addrtype="ipv4"/>
+<address addr="3C:33:00:CC:77:86" addrtype="mac" vendor="Shenzhen Bilian electronic"/>
+<hostnames>
+<hostname name="Ipcam" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65505">
+<extrareasons reason="port-unreaches" count="65505"/>
+</extraports>
+<extraports state="open|filtered" count="30">
+<extrareasons reason="no-responses" count="30"/>
+</extraports>
+</ports>
+<os><portused state="closed" proto="udp" portid="1"/>
+</os>
+<distance value="1"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.5.162" rtt="3.84" host="Ipcam"/>
+</trace>
+<times srtt="3835" rttvar="1954" to="100000"/>
+</host>
+<runstats><finished time="1487720396" timestr="Tue Feb 21 17:39:56 2017" elapsed="71549.04" summary="Nmap done at Tue Feb 21 17:39:56 2017; 1 IP address (1 host up) scanned in 71549.04 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

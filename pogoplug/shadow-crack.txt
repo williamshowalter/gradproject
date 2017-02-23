@@ -1,0 +1,16 @@
+PS C:\Users\william\Documents\Tools\cudaHashcat-2.01> cudaHashcat64.exe -m 500 shadow -a 3
+
+$1$fPVAGjvb$h7mEC9fKHuLr2EWGJoG0y1:ceadmin
+
+Session.Name...: cudaHashcat
+Status.........: Cracked
+Input.Mode.....: Mask (?1?2?2?2?2?2?2) [7]
+Hash.Target....: $1$fPVAGjvb$h7mEC9fKHuLr2EWGJoG0y1
+Hash.Type......: md5crypt, MD5(Unix), FreeBSD MD5, Cisco-IOS MD5
+Time.Started...: Wed Feb 22 16:13:20 2017 (35 secs)
+Speed.GPU.#1...:  6862.2 kH/s
+Recovered......: 1/1 (100.00%) Digests, 1/1 (100.00%) Salts
+Progress.......: 236003328/134960504832 (0.17%)
+Rejected.......: 0/236003328 (0.00%)
+Restore.Point..: 3784704/2176782336 (0.17%)
+HWMon.GPU.#1...:  0% Util, 77c Temp, 2887rpm Fan

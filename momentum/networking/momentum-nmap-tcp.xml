@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.40 scan initiated Tue Feb 21 19:34:06 2017 as: nmap -p 1-65535 -T4 -A -oN momentum-nmap-tcp.txt -sC -oX momentum-nmap-tcp.xml 192.168.5.162 -->
+<nmaprun scanner="nmap" args="nmap -p 1-65535 -T4 -A -oN momentum-nmap-tcp.txt -sC -oX momentum-nmap-tcp.xml 192.168.5.162" start="1487727246" startstr="Tue Feb 21 19:34:06 2017" version="7.40" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1487727247" endtime="1487727300"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.5.162" addrtype="ipv4"/>
+<address addr="3C:33:00:CC:77:86" addrtype="mac" vendor="Shenzhen Bilian electronic"/>
+<hostnames>
+<hostname name="Ipcam" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65526">
+<extrareasons reason="resets" count="65526"/>
+</extraports>
+<port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="telnet" product="security DVR telnetd" extrainfo="many brands" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/><script id="http-title" output="Did not follow redirect to http://Ipcam:8001/"><elem key="redirect_url">http://Ipcam:8001/</elem>
+</script></port>
+<port protocol="tcp" portid="554"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rtsp" servicefp="SF-Port554-TCP:V=7.40%I=7%D=2/21%Time=58ACEAA7%P=x86_64-pc-linux-gnu%r(GetRequest,8B,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20TAS-Tech\x20IPCam\r\nDate:\x20Thu,\x2022\x20Feb\x20117\x2001:34:28\x20GMT\r\nContent-Length:\x209\r\nCache-Control:\x20no-cache\r\n\r\nNot\x20Found&quot;)%r(RTSPRequest,87,&quot;RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nServer:\x20TAS-Tech\x20Streaming\x20Server\x20V100R001\r\nPublic:\x20DESCRIBE,\x20SET_PARAMETER,\x20SETUP,\x20TEARDOWN,\x20PAUSE,\x20PLAY\r\n\r\n&quot;)%r(HTTPOptions,9E,&quot;HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\nServer:\x20TAS-Tech\x20IPCam\r\nDate:\x20Thu,\x2022\x20Feb\x20117\x2001:34:38\x20GMT\r\nContent-Length:\x2018\r\nCache-Control:\x20no-cache\r\n\r\nMethod\x20Not\x20Allowed&quot;)%r(FourOhFourRequest,8B,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20TAS-Tech\x20IPCam\r\nDate:\x20Thu,\x2022\x20Feb\x20117\x2001:34:43\x20GMT\r\nContent-Length:\x209\r\nCache-Control:\x20no-cache\r\n\r\nNot\x20Found&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Server: TAS-Tech IPCam&#xa;    Date: Thu, 22 Feb 117 01:34:43 GMT&#xa;    Content-Length: 9&#xa;    Cache-Control: no-cache&#xa;    Found&#xa;  GetRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Server: TAS-Tech IPCam&#xa;    Date: Thu, 22 Feb 117 01:34:28 GMT&#xa;    Content-Length: 9&#xa;    Cache-Control: no-cache&#xa;    Found&#xa;  HTTPOptions: &#xa;    HTTP/1.1 405 Method Not Allowed&#xa;    Server: TAS-Tech IPCam&#xa;    Date: Thu, 22 Feb 117 01:34:38 GMT&#xa;    Content-Length: 18&#xa;    Cache-Control: no-cache&#xa;    Method Not Allowed&#xa;  RTSPRequest: &#xa;    RTSP/1.0 200 OK&#xa;    CSeq: 0&#xa;    Server: TAS-Tech Streaming Server V100R001&#xa;    Public: DESCRIBE, SET_PARAMETER, SETUP, TEARDOWN, PAUSE, PLAY"><elem key="FourOhFourRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Server: TAS-Tech IPCam&#xa;    Date: Thu, 22 Feb 117 01:34:43 GMT&#xa;    Content-Length: 9&#xa;    Cache-Control: no-cache&#xa;    Found</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Server: TAS-Tech IPCam&#xa;    Date: Thu, 22 Feb 117 01:34:28 GMT&#xa;    Content-Length: 9&#xa;    Cache-Control: no-cache&#xa;    Found</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.1 405 Method Not Allowed&#xa;    Server: TAS-Tech IPCam&#xa;    Date: Thu, 22 Feb 117 01:34:38 GMT&#xa;    Content-Length: 18&#xa;    Cache-Control: no-cache&#xa;    Method Not Allowed</elem>
+<elem key="RTSPRequest">&#xa;    RTSP/1.0 200 OK&#xa;    CSeq: 0&#xa;    Server: TAS-Tech Streaming Server V100R001&#xa;    Public: DESCRIBE, SET_PARAMETER, SETUP, TEARDOWN, PAUSE, PLAY</elem>
+</script><script id="rtsp-methods" output="DESCRIBE, SET_PARAMETER, SETUP, TEARDOWN, PAUSE, PLAY"><elem>DESCRIBE</elem>
+<elem>SET_PARAMETER</elem>
+<elem>SETUP</elem>
+<elem>TEARDOWN</elem>
+<elem>PAUSE</elem>
+<elem>PLAY</elem>
+</script></port>
+<port protocol="tcp" portid="3201"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="cpq-tasksmart" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8001"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rtsp" servicefp="SF-Port8001-TCP:V=7.40%I=7%D=2/21%Time=58ACEAA7%P=x86_64-pc-linux-gnu%r(GetRequest,8B,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20TAS-Tech\x20IPCam\r\nDate:\x20Thu,\x2022\x20Feb\x20117\x2001:34:28\x20GMT\r\nContent-Length:\x209\r\nCache-Control:\x20no-cache\r\n\r\nNot\x20Found&quot;)%r(FourOhFourRequest,8B,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20TAS-Tech\x20IPCam\r\nDate:\x20Thu,\x2022\x20Feb\x20117\x2001:34:33\x20GMT\r\nContent-Length:\x209\r\nCache-Control:\x20no-cache\r\n\r\nNot\x20Found&quot;)%r(HTTPOptions,9E,&quot;HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\nServer:\x20TAS-Tech\x20IPCam\r\nDate:\x20Thu,\x2022\x20Feb\x20117\x2001:34:38\x20GMT\r\nContent-Length:\x2018\r\nCache-Control:\x20no-cache\r\n\r\nMethod\x20Not\x20Allowed&quot;)%r(RTSPRequest,87,&quot;RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nServer:\x20TAS-Tech\x20Streaming\x20Server\x20V100R001\r\nPublic:\x20DESCRIBE,\x20SET_PARAMETER,\x20SETUP,\x20TEARDOWN,\x20PAUSE,\x20PLAY\r\n\r\n&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Server: TAS-Tech IPCam&#xa;    Date: Thu, 22 Feb 117 01:34:33 GMT&#xa;    Content-Length: 9&#xa;    Cache-Control: no-cache&#xa;    Found&#xa;  GetRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Server: TAS-Tech IPCam&#xa;    Date: Thu, 22 Feb 117 01:34:28 GMT&#xa;    Content-Length: 9&#xa;    Cache-Control: no-cache&#xa;    Found&#xa;  HTTPOptions: &#xa;    HTTP/1.1 405 Method Not Allowed&#xa;    Server: TAS-Tech IPCam&#xa;    Date: Thu, 22 Feb 117 01:34:38 GMT&#xa;    Content-Length: 18&#xa;    Cache-Control: no-cache&#xa;    Method Not Allowed&#xa;  RTSPRequest: &#xa;    RTSP/1.0 200 OK&#xa;    CSeq: 0&#xa;    Server: TAS-Tech Streaming Server V100R001&#xa;    Public: DESCRIBE, SET_PARAMETER, SETUP, TEARDOWN, PAUSE, PLAY"><elem key="FourOhFourRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Server: TAS-Tech IPCam&#xa;    Date: Thu, 22 Feb 117 01:34:33 GMT&#xa;    Content-Length: 9&#xa;    Cache-Control: no-cache&#xa;    Found</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Server: TAS-Tech IPCam&#xa;    Date: Thu, 22 Feb 117 01:34:28 GMT&#xa;    Content-Length: 9&#xa;    Cache-Control: no-cache&#xa;    Found</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.1 405 Method Not Allowed&#xa;    Server: TAS-Tech IPCam&#xa;    Date: Thu, 22 Feb 117 01:34:38 GMT&#xa;    Content-Length: 18&#xa;    Cache-Control: no-cache&#xa;    Method Not Allowed</elem>
+<elem key="RTSPRequest">&#xa;    RTSP/1.0 200 OK&#xa;    CSeq: 0&#xa;    Server: TAS-Tech Streaming Server V100R001&#xa;    Public: DESCRIBE, SET_PARAMETER, SETUP, TEARDOWN, PAUSE, PLAY</elem>
+</script><script id="rtsp-methods" output="DESCRIBE, SET_PARAMETER, SETUP, TEARDOWN, PAUSE, PLAY"><elem>DESCRIBE</elem>
+<elem>SET_PARAMETER</elem>
+<elem>SETUP</elem>
+<elem>TEARDOWN</elem>
+<elem>PAUSE</elem>
+<elem>PLAY</elem>
+</script></port>
+<port protocol="tcp" portid="24102"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="34102"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="54273"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" servicefp="SF-Port54273-TCP:V=7.40%I=7%D=2/21%Time=58ACEAA0%P=x86_64-pc-linux-gnu%r(NULL,1D,&quot;\0\0\0\x1dTue\x20Feb\x2021\x2020:34:22\x202017\n&quot;)%r(GenericLines,1D,&quot;\0\0\0\x1dTue\x20Feb\x2021\x2020:34:25\x202017\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GenericLines: &#xa;    20:34:25 2017&#xa;  NULL: &#xa;    20:34:22 2017"><elem key="GenericLines">&#xa;    20:34:25 2017</elem>
+<elem key="NULL">&#xa;    20:34:22 2017</elem>
+</script></port>
+<port protocol="tcp" portid="61440"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netprowler-manager2" servicefp="SF-Port61440-TCP:V=7.40%I=7%D=2/21%Time=58ACEAA2%P=x86_64-pc-linux-gnu%r(NULL,1D,&quot;\0\0\0\x1dTue\x20Feb\x2021\x2020:34:22\x202017\n&quot;)%r(GenericLines,1D,&quot;\0\0\0\x1dTue\x20Feb\x2021\x2020:34:22\x202017\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GenericLines, NULL: &#xa;    20:34:22 2017"><elem key="GenericLines, NULL">&#xa;    20:34:22 2017</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="23"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="39745"/>
+<osmatch name="Linux 2.6.32 - 3.5" accuracy="100" line="53850">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="94892" lastboot="Mon Feb 20 17:13:28 2017"/>
+<distance value="1"/>
+<tcpsequence index="259" difficulty="Good luck!" values="1E193D84,B8DAFCF7,DCAB8FB4,44B61FF2,A3EF9F13,287F988A"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="172A661,172A67B,172A695,172A6AF,172A6C8,172A6E2"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.5.162" rtt="9.13" host="Ipcam"/>
+</trace>
+<times srtt="9132" rttvar="9619" to="100000"/>
+</host>
+<runstats><finished time="1487727300" timestr="Tue Feb 21 19:35:00 2017" elapsed="54.12" summary="Nmap done at Tue Feb 21 19:35:00 2017; 1 IP address (1 host up) scanned in 54.12 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

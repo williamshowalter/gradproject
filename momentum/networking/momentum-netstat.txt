@@ -1,0 +1,21 @@
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:61440           0.0.0.0:*               LISTEN      602/dana_upd
+tcp        0      0 0.0.0.0:54273           0.0.0.0:*               LISTEN      628/ipc-hi3518e-gc1
+tcp        0      0 0.0.0.0:8001            0.0.0.0:*               LISTEN      628/ipc-hi3518e-gc1
+tcp        0      0 0.0.0.0:3201            0.0.0.0:*               LISTEN      629/logwtch
+tcp        0      0 0.0.0.0:24102           0.0.0.0:*               LISTEN      628/ipc-hi3518e-gc1
+tcp        0      0 0.0.0.0:554             0.0.0.0:*               LISTEN      628/ipc-hi3518e-gc1
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      628/ipc-hi3518e-gc1
+tcp        0      0 0.0.0.0:34102           0.0.0.0:*               LISTEN      628/ipc-hi3518e-gc1
+tcp        0      0 0.0.0.0:23              0.0.0.0:*               LISTEN      393/telnetd
+udp        0      0 0.0.0.0:45102           0.0.0.0:*                           628/ipc-hi3518e-gc1
+udp        0      0 0.0.0.0:7998            0.0.0.0:*                           628/ipc-hi3518e-gc1
+udp        0      0 0.0.0.0:8001            0.0.0.0:*                           628/ipc-hi3518e-gc1
+udp        0      0 0.0.0.0:8002            0.0.0.0:*                           628/ipc-hi3518e-gc1
+udp        0      0 0.0.0.0:44102           0.0.0.0:*                           628/ipc-hi3518e-gc1
+udp        0      0 0.0.0.0:65102           0.0.0.0:*                           602/dana_upd
+udp        0      0 0.0.0.0:54102           0.0.0.0:*                           628/ipc-hi3518e-gc1
+udp        0      0 127.0.0.1:1400          0.0.0.0:*                           612/svc_starter
+udp        0      0 0.0.0.0:60144           0.0.0.0:*                           628/ipc-hi3518e-gc1
+
