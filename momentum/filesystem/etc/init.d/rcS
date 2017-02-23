@@ -1,0 +1,33 @@
+#! /bin/sh
+
+/bin/mount -a
+
+echo "
+            _ _ _ _ _ _ _ _ _ _ _ _
+            \  _  _   _  _ _ ___
+            / /__/ \ |_/
+           / __   /  -  _ ___
+          / /  / /  / /
+  _ _ _ _/ /  /  \_/  \_ ______
+___________\___\__________________
+"
+for initscript in /etc/init.d/S[0-9][0-9]*
+do
+	if [ -x $initscript ] ;
+	then
+		echo "[RCS]: $initscript"
+		$initscript
+	fi
+done
+
+mdev -s
+mount -t jffs2 /dev/mtdblock2 /mnt/mtd
+
+mkdir /tmp/mnt
+if [ -x /mnt/mtd/sdc_tool ]; then cp /mnt/mtd/sdc_tool /usr/sbin/; chmod +x /usr/sbin/sdc_tool; fi
+
+/usr/sbin/sdc_tool -c /mnt/mtd/model.ini -i ipcam-3518e
+
+cd /mnt
+/mnt/mtd/boot.sh
+

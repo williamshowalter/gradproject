@@ -1,0 +1,2 @@
+DRIVER=hiusb-ehci
+MODALIAS=platform:hiusb-ehci

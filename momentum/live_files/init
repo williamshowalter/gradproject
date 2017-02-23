@@ -1,0 +1,14 @@
+#!/bin/busybox ash
+
+/bin/busybox mount -t sysfs /dev/sys /sys
+/bin/busybox mount -t proc /proc
+/bin/busybox mount -t devpts /dev/pts
+
+/bin/busybox mdev -s
+/bin/busybox --install -s
+cd /bin; ./btools -i > /dev/null
+/linuxrc
+exec /sbin/init "$@" </dev/console >/dev/console 2>&1
+
+
+

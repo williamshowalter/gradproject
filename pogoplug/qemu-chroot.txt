@@ -1,0 +1,2 @@
+chroot /root/project/pogoplug/filesystem /bin/busybox ash
+# Note - filesytem/usr/bin/qemu-arm-static copied from /usr/bin/qemu-arm-static first

@@ -1,0 +1,5 @@
+modprobe nandsim cache_file=test.bin first_id_byte=0xad second_id_byte=0xf1 third_id_byte=0x00 fourth_id_byte=0x1d parts=112,912
+dd if=mtd2.bin of=/dev/mtd1
+modprobe ubi
+ubiattach /dev/ubi_ctrl -m 1
+mount -t ubifs ubi0:rootfs /media/ubifs

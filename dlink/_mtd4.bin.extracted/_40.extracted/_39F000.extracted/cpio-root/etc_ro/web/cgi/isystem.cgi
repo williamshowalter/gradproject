@@ -1,0 +1,9 @@
+CameraName=%%CameraName();%%
+Location=%%Location();%%
+Model=%%ModelName();%%
+FirmwareVersion=%%FirmwareVersion();%% (%%ReleaseDate();%%)
+MACAddress=%%MACAddress();%%
+IPAddress=%%CurrentIPAddress();%%
+EthernetLink=%%EthernetLink();%%
+EthernetSpeed=%%EthernetSpeed();%% bps
+EthernetDuplex=%%EthernetDuplex();%%

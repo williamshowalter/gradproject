@@ -1,0 +1,3 @@
+chroot /root/project/dlink/filesystem /bin/busybox ash
+
+# filesystem/usr/bin/qemu-mipsel-static copied from /usr/bin/qemu-mipsel-static first

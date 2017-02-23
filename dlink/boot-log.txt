@@ -1,0 +1,486 @@
+
+/bin/sh: reset: not found
+# reset     reboot
+The system is going down NOW!
+Sending SIGTERM to all processes
+# shutdown...wait for 1secs 
+alphapd: SIGTERM!alphapd: Shutdown!
+Sending SIGKILLRequesting system reboot
+Restarting system.
+
+
+U-Boot 1.1.3
+
+Board: Ralink APSoC DRAM:  64 MB
+relocate_code Pointer at: 83fac000
+******************************
+Software System Reset Occurred
+******************************
+spi_wait_nsec: 1e 
+spi device id: 8c 41 17 8c 41 (41178c41)
+find flash: F25L64QA
+raspi_read: from:30000 len:1000 
+.*** Warning - bad CRC, using default environment
+
+============================================ 
+Ralink UBoot Version: 3.5.2.0
+-------------------------------------------- 
+ASIC 3352_MP (Port5<->None)
+DRAM_CONF_FROM: Boot-Strapping 
+DRAM_TYPE: DDR2 
+DRAM_SIZE: 512 Mbits
+DRAM_WIDTH: 16 bits
+DRAM_TOTAL_WIDTH: 16 bits
+TOTAL_MEMORY_SIZE: 64 MBytes
+Flash component: SPI Flash
+============================================ 
+icache: sets:256, ways:4, linesz:32 ,total:32768
+dcache: sets:128, ways:4, linesz:32 ,total:16384 
+
+ ##### The CPU freq = 400 MHZ #### 
+ estimate memory size =64 Mbytes
+
+Signature: DCS-940            932L  Release 1.01 (2012-07-12)
+
+
+Please choose the operation: 
+   1: Load system code to SDRAM via TFTP. 
+   2: Load system code then write to Flash via TFTP. 
+   3: Boot system code via Flash (default).
+   4: Entr boot command line interface.
+   7: Load Boot Loader code then write to Flash via Serial. 
+   9: Load Boot Loader code then write to Flash via TFTP. 
+ 4  3  2  1  0 
+   
+3: System Boot system code via Flash.
+## Booting image at bc050000 ...
+raspi_read: from:50000 len:40 
+.   Image Name:   Linux Kernel Image
+   Created:      2014-04-21   7:07:59 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    6577499 Bytes =  6.3 MB
+   Load Address: 80000000
+   Entry Point:  8037e000
+raspi_read: from:50040 len:645d5b 
+.....................................................................................................   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+No initrd
+## Transferring control to Linux (at address 8037e000) ...
+## Giving linux memsize in MB, 64
+
+Starting kernel ...
+
+
+LINUX started...
+
+ THIS IS ASIC
+Linux version 2.6.21 (andy@ipcam-linux.alphanetworks.com) (gcc version 3.4.2) #1619 Mon Apr 21 15:07:52 CST 2014
+
+ The CPU feqenuce set to 400 MHz
+CPU revision is: 0001964c
+Determined physical RAM map:
+ memory: 04000000 @ 00000000 (usable)
+Initrd not found or empty - disabling initrd
+Built 1 zonelists.  Total pages: 16256
+Kernel command line: console=ttyS1,57600n8 root=/dev/ram0
+Primary instruction cache 32kB, physically tagged, 4-way, linesize 32 bytes.
+Primary data cache 16kB, 4-way, linesize 32 bytes.
+Synthesized TLB refill handler (20 instructions).
+Synthesized TLB load handler fastpath (32 instructions).
+Synthesized TLB store handler fastpath (32 instructions).
+Synthesized TLB modify handler fastpath (31 instructions).
+Cache parity protection disabled
+cause = 40808000, status = 11000000
+PID hash table entries: 256 (order: 8, 1024 bytes)
+calculating r4koff... 00186a00(1600000)
+CPU frequency 400.00 MHz
+Using 200.000 MHz high precision timer.
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 52016k/65536k available (3126k kernel code, 13456k reserved, 445k data, 5356k init, 0k highmem)
+Mount-cache hash table entries: 512
+NET: Registered protocol family 16
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+NET: Registered protocol family 2
+Time: MIPS clocksource has been installed.
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+TCP reno registered
+detected lzma initramfs
+detected lzma initramfs
+initramfs: LZMA lc=3,lp=0,pb=2,dictSize=1048576,origSize=16699392
+LZMA initramfs by Ming-Ching Tiew <mctiew@yahoo.com>...............................................................................................................................................................................................................................................................
+******************** CONFIG_RT2880_ROOTFS_IN_RAM
+******************** CONFIG_RT2880_FLASH_8M
+deice id : 8c 41 17 8c 41 (41178c41)
+F25L64QA(8c 41178c41) (8192 Kbytes)
+mtd .name = raspi, .size = 0x00800000 (8M) .erasesize = 0x00010000 (64K) .numeraseregions = 0
+Creating 5 MTD partitions on "raspi":
+0x00000000-0x00800000 : "ALL"
+0x00000000-0x00030000 : "Bootloader"
+0x00030000-0x00040000 : "Config"
+0x00040000-0x00050000 : "Factory"
+0x00050000-0x00800000 : "Kernel"
+RT3xxx EHCI/OHCI init.
+squashfs: version 3.2-r2 (2007/01/15) Phillip Lougher
+squashfs: LZMA suppport for slax.org by jro
+io scheduler noop registered (default)
+Ralink gpio driver initialized
+***** audio_buffer = 808c91ec 
+--- Boot Code Signature ---
+Signature: DCS-940            932L  Release 1.01 (2012-07-12)
+===== DCS-933L v1.04 build 1 (2014-04-21) =====
+spidrv_major = 217
+HDLC line discipline: version $Revision: 1.1.1.1 $, maxframe=4096
+N_HDLC line discipline registered.
+Serial: 8250/16550 driver $Revision: 1.7 $ 2 ports, IRQ sharing disabled
+serial8250: ttyS0 at I/O 0xb0000500 (irq = 37) is a 16550A
+serial8250: ttyS1 at I/O 0xb0000c00 (irq = 12) is a 16550A
+RAMDISK driver initialized: 16 RAM disks of 16384K size 1024 blocksize
+loop: loaded (max 8 devices)
+rdm_major = 254
+MAC_ADRH -- : 0x00000000
+MAC_ADRL -- : 0x00000000
+Ralink APSoC Ethernet Driver Initilization. v2.0  256 rx/tx descriptors allocated, mtu = 1500!
+***** Init RF/MAC data from flash memory *****
+LAN MAC: 28 10 7B 2D 1D 22 
+MAC_ADRH -- : 0x00002810
+MAC_ADRL -- : 0x7b2d1d22
+PROC INIT OK!
+PPP generic driver version 2.4.2
+PPP Deflate Compression module registered
+PPP BSD Compression module registered
+NET: Registered protocol family 24
+
+
+=== pAd = c0019000, size = 533296 ===
+
+<-- RTMPAllocAdapterBlock, Status=0
+Wlan STA Mode
+Linux video capture interface: v2.00
+block2mtd: version $Revision: 1.1.1.1 $
+usbmon: debugfs is not available
+rt3xxx-ehci rt3xxx-ehci: Ralink EHCI Host Controller
+rt3xxx-ehci rt3xxx-ehci: new USB bus registered, assigned bus number 1
+rt3xxx-ehci rt3xxx-ehci: irq 18, io mem 0x101c0000
+rt3xxx-ehci rt3xxx-ehci: USB 0.0 started, EHCI 1.00, driver 10 Dec 2004
+usb usb1: configuration #1 chosen from 1 choice
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 2 ports detected
+rt3xxx-ohci rt3xxx-ohci: RT3xxx OHCI Controller
+rt3xxx-ohci rt3xxx-ohci: new USB bus registered, assigned bus number 2
+rt3xxx-ohci rt3xxx-ohci: irq 18, io mem 0x101c1000
+usb usb2: configuration #1 chosen from 1 choice
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 2 ports detected
+Advanced Linux Sound Architecture Driver Version 1.0.14rc3 (Wed Mar 14 07:25:50 2007 UTC).
+ALSA device list:
+  No soundcards found.
+nf_conntrack version 0.5.0 (512 buckets, 4096 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team, Type=Restricted Cone
+TCP cubic registered
+NET: Registered protocol family 1
+NET: Registered protocol family 17
+Freeing unused kernel memory: 5356k freed
+init started: BusyBox v1.12.1 (2014-04-21 15:01Algorithmics/MIPS FPU Emulator v1.5
+:26 CST)
+starting pid 629, tty '': '/etc_ro/rcS'
+<OV780: firmware ready (1024us)!>
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (SVN r209)
+usb 1-1: new high speed USB device using rt3xxx-ehci and address 2
+usb 1-1: configuration #1 chosen from 1 choice
+Found format MJPEG.
+- 640x480 (30.0 fps)
+- 320x240 (30.0 fps)
+- 160x120 (30.0 fps)
+uvcvideo: Found UVC 1.00 device USB Camera Aoni   (05a9:7885)
+ 
+ 
+uvcvideo: UVC non compliance - GET_DEF(PROBE) not supported. Enabling workaround.
+usbcore: registered new interface driver snd-usb-audio
+devpts: called with bogus options
+Welcome to
+     _______  _______  ___     __  ____   _  _   ___
+    |  ___  \|   __  ||   |   |__||    \ | || | /  /
+    | |___| ||  |__| ||   |__  __ |     \| || |/  /
+    |   _   /|   _   ||      ||  || |\     ||     \
+    |__| \__\|__| |__||______||__||_| \____||_|\___\
+
+   	             =System Architecture Department=
+
+Wed Jan  1 00:00:00 UTC 2014
+MJPEG frame count = 10
+MJPEG frame size = 131032
+H264 frame count = 8
+H264 frame size = 184279
+*****************
+*  INTERNET.SH  *
+*****************
+Password for 'admin' changed
+Disable LAN !!!
+telnetd/ftpd close !!!
+switch reg write offset=14, value=5555
+switch reg write offset=40, value=1001
+switch reg write offset=44, value=1001
+switch reg write offset=48, value=1001
+switch reg write offset=4c, value=1
+switch reg write offset=50, value=2001
+switch reg write offset=70, value=ffffffff
+switch reg write offset=98, value=7f7f
+switch reg write offset=e4, value=7f
+ifconfig ra0 0.0.0.0 ......
+<-- RTMPAllocTxRxRingMemory, Status=0
+SSID: dlink
+Cfg PhyMode = 9
+Key1Str is Invalid key length(0) or Type(1)
+Key2Str is Invalid key length(0) or Type(1)
+Key3Str is Invalid key length(0) or Type(1)
+Key4Str is Invalid key length(0) or Type(1)
+HT_BW = BW_20
+--> EEPROMAddressNum = 6
+WLAN MAC: 28 10 7B 2D 1D 22 
+*****> TxStream = 1, RxStream = 1 
+Country Region = 80
+Phy Mode = 9
+MCS Set = ff 00 00 00 00
+<==== rt28xx_init, Status=0
+0x1300 = 00064300
+ifconfig lo up ......
+ifconfig eth2 0.0.0.0 ......
+device ra0 entered promiscuous mode
+device eth2 entered promiscuous mode
+**** wlan_init.sh ***
+apcli0    no private ioctls.
+
+brctl: iface apcli0: No such device
+ifconfig: ioctl 0x8913 failed: No such device
+ap-client stop............
+brctl: iface ra1: No such device
+ifconfig: ioctl 0x8913 failed: No such device
+rmmod: rt2860v2_ap: No such file or directory
+AP stop.....
+***** wireless disable *****
+Enable LAN !!!
+*** begin lan.sh ***
+br0: port 2(eth2) entering learning state
+route: ioctl 0x890c failed: No such process
+udhcpc (v1.12.1) started
+alphapd: Startup!
+total files=88
+total file types=3
+ext=js      , num=3
+ext=css     , num=1
+ext=htm     , num=84
+alphapd: Running at address 192.168.0.20:80
+
+***tftp server, listen port: 69***
+br0: topology change detected, propagating
+br0: port 2(eth2) entering forwarding state
+mDNSResponder 192.168.0.20 DCS-933L_2D1D22 "DCS-933L_2D1D22" _http._tcp. 80 &
+Made Service Records for DCS-933L_2D1D22._http._tcp.local.
+
+Lan Link Up
+Speed: 1, Duplex: 1
+led_operation = 0 
+light sensor changed to Day
+Wed Jan  1 00:00:07 UTC 2014
+apcli0    no private ioctls.
+
+brctl: iface apcli0: No such device
+ifconfig: ioctl 0x8913 failed: No such device
+ap-client stop............
+brctl: iface ra1: No such device
+ifconfig: ioctl 0x8913 failed: No such device
+rmmod: rt2860v2_ap: No such file or directory
+AP stop.....
+arping -c 6 -I br0 -s 192.168.0.20 1.1.1.1
+ARPING to 1.1.1.1 from 192.168.0.20 via br0
+*** lan.sh -> mydlink ***
+kill: you need to specify whom to kill
+killall: dcp: no process killed
+killall: signalc: no process killed
+killall: upnpc-ddns: no process killed
+killall: tsa: no process killed
+killall: ipca: no process killed
+opt.local stop ok.
+kill: you need to specify whom to kill
+killall: dcp: no process killed
+killall: signalc: no process killed
+killall: upnpc-ddns: no process killed
+killall: tsa: no process killed
+killall: ipca: no process killed
+opt.local stop ok.
+/mydlink/mydlink-watch-dog.sh: line 103: mdb: not found
+/mydlink/mydlink-watch-dog.sh: line 113: pibinfo: not found
+opt.local start ok.
+rm /tmp/mydlink/*.*
+rm: cannot remove '/tmp/mydlink/*.*': No such file or directory
+Service DCS-933L_2D1D22._http._tcp.local. now registered and active
+*** end lan.sh ***
+uvc_stream : version (Apr 21 2014-15:03:10)
+save to header file : /var/run/audio.header
+videomon: use signal (16) to restart video.sh
+[SetVolume]: min=0, max=489, set=391
+pcmcmd: sample rate = 11025Hz
+pcmcmd: skip=(500 ms), average=(1000 ms)
+Write Reg 0xE3=0x5A, read=0x5A
+Write Reg 0xE3=0xA5, read=0xA5
+Sensor Product ID : 7742
+Sensor Manufacturer ID : 7FA2
+uvc_stream: OV7740 Video Mode=0, AE=5, Gamma=5
+h264 : version (Apr 21 2014-15:03:10)
+h264: device=(/dev/video1), image quality=(-1), process sleep=(10ms)
+h264: record output file=(/etc_ro/web/h264.raw), record time=(0)
+h264: debug flag=(   0), drop frames=(2), frame rate duration=(180)
+h264: max frame size = 184279
+h264: bit rate = 8 (2 Mbps)
+h264:wait uvc_stream ready...
+Wed Jan  1 00:00:09 UTC 2014
+*** nvram_daemon(lan up) -> mydlink ***
+Sending select for 192.168.5.179...
+Lease of 192.168.5.179 obtained, lease time 86400
+ifconfig: ioctl 0x8914 failed: Cannot assign requested address
+deleting route
+route: ioctl 0x890c failed: No such process
+killall: upnpc-ddns: no process killed
+killall: tsa: no process killed
+adding dns 8.8.8.8
+killall: ipca: no process killed
+opt.local stop ok.
+forked to background (986)
+adding dns 192.168.5.1
+kill: you need to specify whom to kill
+WT6703F: Pan-Tilt function not support
+swing: Pan-Tilt function not support
+
+***** g_wl_interface = ra0 ******
+
+killall: dcp: no process killed
+************************
+*  END OF INTERNET.SH  *
+************************
+alphapd: SIGTERM!alphapd: Startup!
+alphapd: Shutdown!
+killall: signalc: no process killed
+starting pid 1030, tty '/dev/ttyS1': '/bin/sh'
+
+
+BusyBox v1.12.1 (2014-04-21 15:01:26 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+# killall: upnpc-ddns: no process killed
+killall: tsa: no process killed
+killall: ipca: no process killed
+opt.local stop ok.
+/mydlink/mydlink-watch-dog.sh: line 103: mdb: not found
+/mydlink/mydlink-watch-dog.sh: line 113: pibinfo: not found
+opt.local start ok.
+rm /tmp/mydlink/*.*
+total files=88
+total file types=3
+ext=js      , num=3
+rm: cannot remove '/tmp/mydlink/*.*': No such file or directory
+ext=css     , num=1
+ext=htm     , num=84
+alphapd: Running at address 192.168.5.179:80
+
+***tftp server, listen port: 69***
+mkdir: cannot create directory '/tmp/mydlink': File exists
+mDNSResponder 192.168.5.179 DCS-933L_2D1D22 "DCS-933L_2D1D22" _http._tcp. 80 &
+Made Service Records for DCS-933L_2D1D22._http._tcp.local.
+Wed Jan  1 00:00:12 UTC 2014
+*** udhcpc.sh -> mydlink ***
+killall: upnpc-ddns: no process killed
+killall: tsa: no process killed
+killall: ipca: no process killed
+opt.local stop ok.
+kill: you need to specify whom to kill
+killall: upnpc-ddns: no process killed
+killall: tsa: no process killed
+killall: ipca: no process killed
+opt.local stop ok.
+/mydlink/mydlink-watch-dog.sh: line 103: mdb: not found
+opt.local start ok.
+rm /tmp/mydlink/*.*
+rm: cannot remove '/tmp/mydlink/*.*': No such file or directory
+Service DCS-933L_2D1D22._http._tcp.local. now registered and active
+/mydlink/mydlink-watch-dog.sh: line 113: pibinfo: not found
+Sent 6 probe(s) (6 broadcast(s))
+Received 0 reply (0 request(s), 0 broadcast(s))
+*** begin dhcp.sh ***
+*** re-start dhcp client ***
+route: ioctl 0x890c failed: No such process
+udhcpc (v1.12.1) started
+Sending select for 192.168.5.179...
+Lease of 192.168.5.179 obtained, lease time 86400
+ifconfig: ioctl 0x8914 failed: Cannot assign requested address
+deleting route
+route: ioctl 0x890c failed: No such process
+adding dns 8.8.8.8
+adding dns 192.168.5.1
+alphapd: SIGTERM!alphapd: Startup!
+alphapd: Shutdown!
+total files=88
+total file types=3
+ext=js      , num=3
+ext=css     , num=1
+ext=htm     , num=84
+alphapd: Running at address 192.168.5.179:80
+
+***tftp server, listen port: 69***
+mkdir: cannot create directory '/tmp/mydlink': File exists
+mDNSResponder 192.168.5.179 DCS-933L_2D1D22 "DCS-933L_2D1D22" _http._tcp. 80 &
+Wed Jan  1 00:00:15 UTC 2014
+*** udhcpc.sh -> mydlink ***
+Made Service Records for DCS-933L_2D1D22._http._tcp.local.
+killall: upnpc-ddns: no process killed
+killall: tsa: no process killed
+killall: ipca: no process killed
+opt.local stop ok.
+*** sensor_fps = 15
+kill: you need to specify whom to kill
+killall: upnpc-ddns: no process killed
+killall: tsa: no process killed
+killall: ipca: no process killed
+opt.local stop ok.
+/mydlink/mydlink-watch-dog.sh: line 103: mdb: not found
+/mydlink/mydlink-watch-dog.sh: line 113: pibinfo: not found
+opt.local start ok.
+rm /tmp/mydlink/*.*
+rm: cannot remove '/tmp/mydlink/*.*': No such file or directory
+Service DCS-933L_2D1D22._http._tcp.local. now registered and active
+light sensor changed to Day
+Wed Jan  1 00:00:24 UTC 2014
+*** nvram_daemon(system ready) -> mydlink ***
+killall: upnpc-ddns: no process killed
+killall: tsa: no process killed
+killall: ipca: no process killed
+opt.local stop ok.
+kill: you need to specify whom to kill
+killall: upnpc-ddns: no process killed
+killall: tsa: no process killed
+killall: ipca: no process killed
+opt.local stop ok.
+/mydlink/mydlink-watch-dog.sh: line 103: mdb: not found
+/mydlink/mydlink-watch-dog.sh: line 113: pibinfo: not found
+opt.local start ok.
+rm /tmp/mydlink/*.*
+rm: cannot remove '/tmp/mydlink/*.*': No such file or directory
+
+ov780 -I -O 1266 -C 3 -S 2 -P0 140101 -P1 000035
+
+ov780 -I -O 1266 -C 5 -S 1 -P0 5
+ov780 -I -O 1266 -C 5 -S 2 -P0 0
+ov780 -I -C 3 -S 9
+<ov780 fw version = (1.1.22328)>
+gpio osd
+OSD is disabled !
+
+start_DST == 0
+
+# 

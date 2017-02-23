@@ -1,0 +1,6 @@
+dev:    size   erasesize  name
+mtd0: 00800000 00010000 "ALL"
+mtd1: 00030000 00010000 "Bootloader"
+mtd2: 00010000 00010000 "Config"
+mtd3: 00010000 00010000 "Factory"
+mtd4: 007b0000 00010000 "Kernel"

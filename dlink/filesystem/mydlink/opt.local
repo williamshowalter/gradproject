@@ -1,0 +1,60 @@
+#!/bin/sh
+
+die() {
+    echo $@
+    exit 1
+}
+
+showUsage() {
+    die "$0 {start|stop}"
+}
+
+action=$1
+end=$2
+
+[ "$end" = "" ] && [ "$action" != "" ] || showUsage
+
+export PATH=/mydlink:$PATH
+model=`tdb get System Model_ss`
+
+start() {
+    /mydlink/dcp -i br0 -m "$model" > /dev/null 2>&1 &
+    /mydlink/signalc > /dev/null 2>&1 &
+    /mydlink/mydlink-watch-dog.sh 2>&1 &
+    echo opt.local start ok.
+}
+
+startNoneL() {
+    /mydlink/dcp -i br0 > /dev/null 2>&1 &
+    echo "opt.local(NoneL) start ok."
+}
+
+stop() {
+    pid=`ps | grep mydlink-watch-dog | grep -v grep | sed 's/^[ \t]*//'  | sed 's/ .*//' `
+    kill -9 $pid
+
+    killall dcp
+    killall signalc
+    killall upnpc-ddns
+    killall tsa
+    killall ipca
+    echo "opt.local stop ok."
+}
+
+case $action in
+    start)
+        stop
+        start
+    ;;
+    stop)
+        stop
+    ;;
+    startNoneL)
+        startNoneL
+    ;;
+    *)
+        showUsage
+    ;;
+esac
+
+exit 0

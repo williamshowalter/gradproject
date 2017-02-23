@@ -1,0 +1,226 @@
+
+
+U-Boot 2010.06-svn30 (Sep 17 2015 - 10:44:09)
+
+Check spi flash controller v350... Found
+Spi(cs1) ID: 0xC2 0x20 0x18 0xC2 0x20 0x18
+Spi(cs1): Block:64KB Chip:16MB Name:"MX25L128XX"
+MMC:   MMC FLASH INIT: No card on slot!
+In:    serial
+Out:   serial
+Err:   serial
+gpio0 data is 74
+key not push
+Hit any key to stop autoboot:  1  0 
+16384 KiB hi_sfc at 0:0 is now current device
+
+## Booting kernel from Legacy Image at 81c00000 ...
+   Image Name:   Linux-3.0.8
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    3029440 Bytes = 2.9 MiB
+   Load Address: 80008000
+   Entry Point:  80008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Linux version 3.0.8 (song@localhost.localdomain) (gcc version 4.4.1 (Hisilicon_v100(gcc4.4-290+uclibc_0.9.32.1+eabi+linuxpthread)) ) #29 Fri Mar 20 15:44:57 CST 2015
+CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=00053177
+CPU: VIVT data cache, VIVT instruction cache
+Machine: hi3518
+Ignoring unrecognised tag 0x726d6d73
+Memory policy: ECC disabled, Data cache writeback
+AXI bus clock 200000000.
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 8128
+Kernel command line: mem=32M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=jffs2 mtdparts=hi_sfc:768K(boot),3M(kernel),8448K(rootfs),4096K(bak)
+PID hash table entries: 128 (order: -3, 512 bytes)
+Dentry cache hash table entries: 4096 (order: 2, 16384 bytes)
+Inode-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Memory: 32MB = 32MB total
+Memory: 26556k/26556k available, 6212k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+    vmalloc : 0xc2800000 - 0xfe000000   ( 952 MB)
+    lowmem  : 0xc0000000 - 0xc2000000   (  32 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .init : 0xc0008000 - 0xc01ce000   (1816 kB)
+      .text : 0xc01ce000 - 0xc0593000   (3860 kB)
+      .data : 0xc0594000 - 0xc05ae3e0   ( 105 kB)
+       .bss : 0xc05ae404 - 0xc05c0438   (  73 kB)
+SLUB: Genslabs=13, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS:32 nr_irqs:32 32
+sched_clock: 32 bits at 100MHz, resolution 10ns, wraps every 42949ms
+Console: colour dummy device 80x30
+Calibrating delay loop... 218.74 BogoMIPS (lpj=427008)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+NET: Registered protocol family 16
+Serial: AMBA PL011 UART driver
+uart:0: ttyAMA0 at MMIO 0x20080000 (irq = 5) is a PL011 rev2
+console [ttyAMA0] enabled
+uart:1: ttyAMA1 at MMIO 0x20090000 (irq = 5) is a PL011 rev2
+bio: create slab <bio-0> at 0
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+Switching to clocksource timer1
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 1024 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+TCP reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+NetWinder Floating Point Emulator V0.97 (double precision)
+JFFS2 version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+msgmni has been set to 51
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered (default)
+io scheduler cfq registered
+brd: module loaded
+Spi id table Version 1.22
+Spi(cs1) ID: 0xC2 0x20 0x18 0xC2 0x20 0x18
+SPI FLASH start_up_mode is 3 Bytes
+Spi(cs1): 
+Block:64KB 
+Chip:16MB 
+Name:"MX25L128XX"
+spi size: 16MB
+chip num: 1
+4 cmdlinepart partitions found on MTD device hi_sfc
+Creating 4 MTD partitions on "hi_sfc":
+0x000000000000-0x0000000c0000 : "boot"
+0x0000000c0000-0x0000003c0000 : "kernel"
+0x0000003c0000-0x000000c00000 : "rootfs"
+0x000000c00000-0x000001000000 : "bak"
+Fixed MDIO Bus: probed
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+hiusb-ehci hiusb-ehci.0: HIUSB EHCI
+hiusb-ehci hiusb-ehci.0: new USB bus registered, assigned bus number 1
+hiusb-ehci hiusb-ehci.0: irq 15, io mem 0x100b0000
+hiusb-ehci hiusb-ehci.0: USB 0.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+hiusb-ohci hiusb-ohci.0: HIUSB OHCI
+hiusb-ohci hiusb-ohci.0: new USB bus registered, assigned bus number 2
+hiusb-ohci hiusb-ohci.0: irq 16, io mem 0x100a0000
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+TCP cubic registered
+NET: Registered protocol family 17
+lib80211: common routines for IEEE802.11 drivers
+Registering the dns_resolver key type
+drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+øFreeing init memory: 1816K
+mount: can't find /dev/pts in /etc/fstab
+usb 1-1: new high speed USB device number 2 using hiusb-ehci
+
+            _ _ _ _ _ _ _ _ _ _ _ _
+            \  _  _   _  _ _ ___
+            / /__/ \ |_/
+           / __   /  -  _ ___
+          / /  / /  / /
+  _ _ _ _/ /  /  \_/  \_ ______
+___________\___\__________________
+
+[RCS]: /etc/init.d/S00devs
+[RCS]: /etc/init.d/S01udev
+/etc/init.d/S01udev: line 6: udevd: not found
+/etc/init.d/S01udev: line 7: udevstart: not found
+[RCS]: /etc/init.d/S80network
+ifconfig: SIOCGIFFLAGS: No such device
+load ko-hisi_1.0.8.0-3518e-det_sns-28Mmmz.tgz ...
+Hisilicon Media Memory Zone Manager
+hi3518_base: module license 'Proprietary' taints kernel.
+Disabling lock debugging due to kernel taint
+Hisilicon UMAP device driver interface: v3.00
+pa:82400000, va:c29c0000
+load sys.ko for Hi3518...OK!
+load viu.ko for Hi3518...OK!
+ISP Mod init!
+load vpss.ko ....OK!
+load vou.ko ....OK!
+load venc.ko for Hi3518...OK!
+load group.ko for Hi3518...OK!
+load chnl.ko for Hi3518...OK!
+load h264e.ko for Hi3518...OK!
+load jpege.ko for Hi3518...OK!
+load rc.ko for Hi3518...OK!
+load region.ko ....OK!
+load vda.ko ....OK!
+hi_i2c init is ok!
+Hisilicon Watchdog Timer: 0.01 initialized. default_margin=60 sec (nowayout= 0, nodeamon= 0)
+Probe ov9712 ...
+Probe po4100k ...
+set to default ar0130
+Kernel: ssp initial ok!
+acodec inited!
+insert audio
+==== Your input Sensor type is ar0130 ====
+load ko-other-ipc019.tgz ...
+ShuoYing IPC019(hi3518e) gpio device initialized[2015.05.22]. use_adc=0
+load ko-wifi-mt7601.airlink.tgz ...
+rtusb init rt2870 --->
+usbcore: registered new interface driver rt2870
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[Atar: can't open 'html.np.tgz': No such file or directory
+tar: can't open 'CHS.FON.tgz': No such file or directory
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[Amv: can't rename '/mnt/svc_starter': No such file or directory
+mv: can't rename '/mnt/ddnsclt': No such file or directory
+svc_starter:
+	Act as the parent of backgroud processes. The background progresses are started
+	by main program but should not or need not exit when main progress quits.
+	for example: pppd, wpa_supplicant, ...
+svc_starter started ...
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[Amount: mounting /dev/mmcblk0p1 on /sysd failed: No such file or directory
+mount: mounting /dev/mmcblk0 on /sysd failed: No such file or directory
+/bin/sh: /sysd/snow.sh: not found
+run sy hook
+umount: can't forcibly umount /sysd: Invalid argument
+listen on port 3201.
+ifconfig: SIOCSIFHWADDR: Operation not supported
+Can not open dir ./html/lang
+setsockopt IP_ADD_MEMBERSHIP: No such device
+route: SIOCDELRT: No such process
+0x1300 = 00064300
+ifconfig: SIOCGIFFLAGS: No such device
+ifconfig: SIOCSIFADDR: No such device
+udhcpc (v1.16.1) started
+Setting IP address 0.0.0.0 on ra0
+Sending discover...
+Sending discover...
+Sending select for 192.168.5.162...
+Lease of 192.168.5.162 obtained, lease time 86400
+Setting IP address 192.168.5.162 on ra0
+Deleting routers
+route: SIOCDELRT: No such process
+Adding router 192.168.5.1
+Recreating /etc/resolv.conf
+ Adding DNS server 8.8.8.8
+ Adding DNS server 192.168.5.1
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.5.1     0.0.0.0         UG    0      0        0 ra0
+192.168.5.0     0.0.0.0         255.255.255.0   U     0      0        0 ra0
+hirtc_set_time->396: 
+check state error!
+
+hirtc_set_time->396: 
+check state error!
+
+hirtc_set_time->396: 
+check state error!
+

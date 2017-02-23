@@ -1,0 +1,49 @@
+  PID USER       VSZ STAT COMMAND
+    1 root      1420 S    /bin/busybox ash /init
+    2 root         0 SW   [kthreadd]
+    3 root         0 SW   [ksoftirqd/0]
+    4 root         0 SW   [kworker/0:0]
+    5 root         0 SW   [kworker/u:0]
+    6 root         0 SW   [rcu_kthread]
+    7 root         0 SW<  [khelper]
+    8 root         0 SW   [kworker/u:1]
+  102 root         0 SW   [sync_supers]
+  104 root         0 SW   [bdi-default]
+  105 root         0 SW<  [kintegrityd]
+  107 root         0 SW<  [kblockd]
+  117 root         0 SW   [khubd]
+  208 root         0 SW<  [rpciod]
+  209 root         0 SW   [kworker/0:1]
+  212 root         0 SW   [kswapd0]
+  266 root         0 SW<  [nfsiod]
+  275 root         0 SW<  [crypto]
+  299 root         0 SW   [mtdblock0]
+  304 root         0 SW   [mtdblock1]
+  309 root         0 SW   [mtdblock2]
+  314 root         0 SW   [mtdblock3]
+  317 root         0 SW   [romblock0]
+  320 root         0 SW   [romblock1]
+  323 root         0 SW   [romblock2]
+  326 root         0 SW   [romblock3]
+  344 root         0 SW<  [kpsmoused]
+  363 root      1420 S    init
+  364 root      1424 S    /bin/sh /etc/init.d/rcS
+  382 root         0 SWN  [jffs2_gcd_mtd2]
+  385 root      1452 S    /bin/sh /mnt/mtd/boot.sh
+  393 root      1420 S    telnetd
+  519 root         0 SW   [hidog]
+  601 root     17492 S    /mnt/dana_upd
+  612 root       804 S    svc_starter
+  614 root      1416 S    syslogd
+  628 root     87568 S    ./ipc-hi3518e-gc1004-dana
+  629 root      3024 S    /mnt/mtd/logwtch -v
+  663 root         0 SW   [RtmpTimerTask]
+  664 root         0 SW   [RtmpMlmeTask]
+  665 root         0 SW   [RtmpCmdQTask]
+  701 root      2356 S    wpa_supplicant -i ra0 -c /mnt/mtd/cfg/wpa_supplicant.conf -D wext -B
+  713 root      1432 S    udhcpc -i ra0 -b -s /usr/share/udhcpc/default.script -h Ipcam
+14760 root         0 SW   [cifsd]
+15024 root         0 SW   [flush-cifs-5]
+16062 root      1432 S    -sh
+16126 root      1460 S    msh
+16773 root      1420 R    ps

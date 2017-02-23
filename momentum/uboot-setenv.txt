@@ -1,0 +1,16 @@
+setenv bootdelay 1
+setenv baudrate 115200
+setenv bootfile "uImage"
+setenv ethaddr 00:10:67:20:80:30
+setenv filesize 2CD658
+setenv fileaddr 82000000
+setenv gatewayip 192.168.0.10
+setenv netmask 255.255.255.0
+setenv ipaddr 192.168.0.8
+setenv serverip 192.168.0.26
+setenv bootargs "em=32M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=jffs2 mtdparts=hi_sfc:768K(boot),3M(kernel),8448K(rootfs),4096K(bak)"
+setenv bootcmd "mw 200f0038 0;mw 20180400 8;mw 20180038 1;mw 0x200f012c 0;mw 0x200f0130 0;mw 0x20140400 0x18;mw 2014012c 0x18;sf probe 0;sf read 0x81c00000 0xC0000 0x300000;bootm 0x81c00000"
+setenv stdin serial
+setenv stdout serial
+setenv stderr serial
+setenv verify n

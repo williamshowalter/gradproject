@@ -1,0 +1,367 @@
+
+Resetting...Stage-1 Bootloader Thu Jul 29 19:36:02 PDT 2010
+Attempting to set PLLA to 700MHz ...
+  plla_ctrl0 : 0x0000000A
+  plla_ctrl1 : 0x000E0000
+  plla_ctrl2 : 0x001C01A0
+  plla_ctrl3 : 0x00000016
+PLLA Set
+
+Setup memory, testing
+Reading NAND, Image 0
+  Hdr len: 0x0001C030
+  Hdr CRC: 0x39F6D832
+ OK
+
+
+U-Boot 1.1.2 (Jul 29 2010 - 19:36:07)
+
+U-Boot code: 60D00000 -> 60D1C030  BSS: -> 60D21800
+RAM Configuration:
+	Bank #0: 60000000 128 MB
+SRAM Configuration:
+	64KB at 0x50000000
+NAND:128 MiB
+In:    serial
+Out:   serial
+Err:   serial
+Setting Linux mem= boot arg value
+Hit any key to stop autoboot:  2  1  0 
+
+Loading from device 0: 128MiB 3,3V 8-bit (offset 0x200000)
+   -- Using 1bit ECC style encoding
+   Image Name:   Linux-2.6.31.6_SMP_820
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2260628 Bytes =  2.2 MB
+   Load Address: 60008000
+   Entry Point:  60008000
+## Booting image at 60500000 ...
+   Image Name:   Linux-2.6.31.6_SMP_820
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2260628 Bytes =  2.2 MB
+   Load Address: 60008000
+   Entry Point:  60008000
+   Verifying Checksum ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux................................................................................................................................... done, booting the kernel.
+[    0.000000] Linux version 2.6.31.6_SMP_820 (bdietrich@brad-ux) (gcc version 4.4.1 (Sourcery G++ Lite 2009q3-67) ) #71 SMP Tue Nov 30 12:05:09 PST 2010
+[    0.000000] CPU: ARMv6-compatible processor [410fb025] revision 5 (ARMv7), cr=00c5387f
+[    0.000000] CPU: VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+[    0.000000] Machine: Oxsemi NAS
+[    0.000000] 1 memory region
+[    0.000000] Ignoring unrecognised tag 0x00000000
+[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line: root=ubi0:rootfs ubi.mtd=2,512 rootfstype=ubifs console=ttyS0,115200 elevator=cfq mac_adr=0x00,0x30,0xe0,0x00,0x00,0x01 mem=128M poweroutage=yes
+[    0.000000] PID hash table entries: 512 (order: 9, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Memory: 128MB = 128MB total
+[    0.000000] Memory: 125468KB available (3724K code, 275K data, 124K init, 0K highmem)
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] NR_IRQS:96
+[    0.000000] OX820_RPS_init_irq: interrupts 64 to 96
+[    0.010000] Console: colour dummy device 80x30
+[    0.010000] console [ttyS0] enabled
+[    0.020000] Calibrating delay loop... 279.34 BogoMIPS (lpj=1396736)
+[    0.260000] Security Framework initialized
+[    0.260000] Mount-cache hash table entries: 512
+[    0.270000] CPU: Testing write buffer coherency: ok
+[    0.270000] Calibrating local timer... 349.99MHz.
+[    0.340000] CPU1: Booted secondary processor
+[    0.440000] Calibrating delay loop... 279.34 BogoMIPS (lpj=1396736)
+[    0.670000] Brought up 2 CPUs
+[    0.680000] SMP: Total of 2 processors activated (558.69 BogoMIPS).
+[    0.690000] NET: Registered protocol family 16
+[    0.690000] Number of DMA channels = 4, version = 4
+[    0.700000] Reserving a DMA channel for DirectRAID
+[    0.700000] Allocating 389 SRAM generic DMA descriptors
+[    1.210000] PCIeA version/deviceID 082510b5
+[    1.210000] PCIeB version/deviceID 082510b5
+[    4.240000] ox820_pci_preinit() PCIEB link up timeout (00001814)
+[    4.240000] ox820_pcie_setup_resources() Enabling PCIe Pre-Emphasis
+[    4.250000] ox820_pciea_setup_resources() resource c781b2c0
+[    4.250000] ox820_pciea_setup_resources()    io:      0x4be00000 - 0x4befffff
+[    4.260000] ox820_pciea_setup_resources()    non-pre: 0x48000000 - 0x49ffffff
+[    4.270000] ox820_pciea_setup_resources()    pre:     0x4a000000 - 0x4bdfffff
+[    4.270000] PCI: bus0: Fast back to back transfers disabled
+[    4.280000] PCI: bus1: Fast back to back transfers enabled
+[    4.300000] bio: create slab <bio-0> at 0
+[    4.300000] SCSI subsystem initialized
+[    4.330000] NET: Registered protocol family 2
+[    4.330000] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    4.340000] Switched to NOHz mode on CPU #0
+[    4.340000] TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+[    4.340000] Switched to NOHz mode on CPU #1
+[    4.350000] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    4.360000] TCP: Hash tables configured (established 4096 bind 4096)
+[    4.360000] TCP reno registered
+[    4.370000] NET: Registered protocol family 1
+[    4.370000] Create fragment cache
+[    4.380000] fuse init (API version 7.12)
+[    4.380000] msgmni has been set to 245
+[    4.390000] alg: No test for stdrng (krng)
+[    4.390000] io scheduler noop registered
+[    4.400000] io scheduler anticipatory registered
+[    4.400000] io scheduler deadline registered
+[    4.410000] io scheduler cfq registered (default)
+[    4.430000] Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+[    4.440000] serial8250: ttyS0 at MMIO 0x44200000 (irq = 55) is a 16550A
+[    4.460000] brd: module loaded
+[    4.470000] loop: module loaded
+[    4.470000] ox820sata: OX820 sata core.
+[    4.470000] scsi0 : oxnassata
+[    4.480000] scsi1 : oxnassata
+[    4.480000] ata1: SATA max UDMA/133 irq 50
+[    4.490000] ata2: SATA max UDMA/133 irq 50
+[    4.490000] ox820sata: reseting SATA core
+[    4.850000] ata1: SATA link down (SStatus 0 SControl 300)
+[    4.850000] ox820sata: reseting SATA core
+[    5.210000] ata2: SATA link down (SStatus 0 SControl 300)
+[    5.210000] tun: Universal TUN/TAP device driver, 1.6
+[    5.220000] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    5.220000] NAND: Page read time 40ms
+[    5.230000] NAND device: Manufacturer ID: 0xad, Chip ID: 0xf1 (Hynix NAND 128MiB 3,3V 8-bit)
+[    5.240000] Scanning device for bad blocks
+[    5.310000] Creating 2 MTD partitions on "NAND 128MiB 3,3V 8-bit":
+[    5.320000] 0x000000000000-0x000000e00000 : "boot"
+[    5.320000] 0x000000e00000-0x000008000000 : "rootfs"
+[    5.330000] UBI: attaching mtd2 to ubi0
+[    5.330000] UBI: physical eraseblock size:   131072 bytes (128 KiB)
+[    5.340000] UBI: logical eraseblock size:    129024 bytes
+[    5.340000] UBI: smallest flash I/O unit:    2048
+[    5.350000] UBI: sub-page size:              512
+[    5.350000] UBI: VID header offset:          512 (aligned 512)
+[    5.360000] UBI: data offset:                2048
+[    5.770000] UBI: attached mtd2 to ubi0
+[    5.780000] UBI: MTD device name:            "rootfs"
+[    5.780000] UBI: MTD device size:            114 MiB
+[    5.790000] UBI: number of good PEBs:        912
+[    5.790000] UBI: number of bad PEBs:         0
+[    5.790000] UBI: max. allowed volumes:       128
+[    5.800000] UBI: wear-leveling threshold:    4096
+[    5.800000] UBI: number of internal volumes: 1
+[    5.810000] UBI: number of user volumes:     1
+[    5.810000] UBI: available PEBs:             0
+[    5.820000] UBI: total number of reserved PEBs: 912
+[    5.820000] UBI: number of PEBs reserved for bad PEB handling: 9
+[    5.830000] UBI: max/mean erase counter: 2/0
+[    5.830000] UBI: image sequence number: 0
+[    5.840000] UBI: background thread "ubi_bgt0d" started, PID 278
+[    5.840000] mice: PS/2 mouse device common for all mice
+[    5.850000] TCP cubic registered
+[    5.850000] NET: Registered protocol family 10
+[    5.860000] NET: Registered protocol family 17
+[    5.860000] RPC: Registered udp transport module.
+[    5.870000] RPC: Registered tcp transport module.
+[    5.990000] UBIFS: recovery needed
+[    6.080000] UBIFS: recovery completed
+[    6.090000] UBIFS: mounted UBI device 0, volume 0, name "rootfs"
+[    6.090000] UBIFS: file system size:   114573312 bytes (111888 KiB, 109 MiB, 888 LEBs)
+[    6.100000] UBIFS: journal size:       9033728 bytes (8822 KiB, 8 MiB, 71 LEBs)
+[    6.110000] UBIFS: media format:       w4/r0 (latest is w4/r0)
+[    6.110000] UBIFS: default compressor: zlib
+[    6.120000] UBIFS: reserved for root:  0 bytes (0 KiB)
+[    6.120000] VFS: Mounted root (ubifs filesystem) on device 0:10.
+[    6.130000] Freeing init memory: 124K
+/dev/mem opened.
+Memory mapped at address 0x40024000.
+Value at address 0x44A00000 (0x40024000): 0x0
+Written 0x14; readback 0x100000
+/dev/mem opened.
+Memory mapped at address 0x40024000.
+Value at address 0x44A00004 (0x40024004): 0x0
+Written 0x4CE10; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0x40024000.
+Value at address 0x44A00004 (0x40024004): 0x0
+Written 0x2CE10; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0x40024000.
+Value at address 0x44A00000 (0x40024000): 0x0
+Written 0x2004; readback 0x100000
+/dev/mem opened.
+Memory mapped at address 0x40024000.
+Value at address 0x44A00004 (0x40024004): 0x0
+Written 0x482C7; readback 0x0
+/dev/mem opened.
+Memory mapped at address 0x40024000.
+Value at address 0x44A00004 (0x40024004): 0x0
+Written 0x282C7; readback 0x0
+[    7.030000] Probing for Synopsis GMAC, unit 0
+[    7.040000] eth0: Tuning GMAC 0 RGMII timings
+[    7.040000] eth0: PHY is Realtek RTL8211D, type 0x001cc914
+[    7.050000] eth0: GMAC ver = 53, vendor ver = 18 at 0xe1400000, IRQ 40
+[    7.060000] eth0: Found PHY at address 3, type 0x001cc914 -> 10/100/1000
+[    7.070000] eth0: Ethernet addr: 00:30:e0:00:00:00
+[    7.570000] PCI: enabling device 0000:00:00.0 (0140 -> 0142)
+[    7.570000] 
+[    7.570000] 
+[    7.570000] === pAd = e0b00000, size = 519160 ===
+[    7.570000] 
+[    7.580000] <-- RTMPAllocAdapterBlock, Status=0
+[    7.590000] pAd->CSRBaseAddress =0xe9000000, csr_addr=0xe9000000!
+[    7.610000] eth0: PHY is Realtek RTL8211D, type 0x001cc914
+[    7.620000] Offload is not active on eth0
+[    7.620000] Alloc'ing ARM descs 10240 bytes
+[    7.630000] eth0: Resetting GMAC
+[    7.630000] eth0: GMAC reset complete
+[    7.640000] eth0: Setting Rx flow control thresholds for LAN port
+[    8.190000] eth0: PHY is Realtek RTL8211D, type 0x001cc914
+[    8.690000] eth0: link down
+[   10.650000] ADDRCONF(NETDEV_UP): eth0: link is not ready
+udhcpc (v1.16.1) started
+HWADDR 00 0x25 0x31 0x01 0xc3 0x8b
+PIP0 195
+PIP1 139
+cat: can't open '/etc/resolv.conf': No such file or directory
+route: SIOCDELRT: No such process
+grep: /etc/resolv.conf: No such file or directory
+Sending discover...
+Sending discover...
+Sending discover...
+HWADDR 00 0x25 0x31 0x01 0xc3 0x8b
+PIP0 195
+PIP1 139
+No lease, forking to background
+[   20.780000] usbcore: registered new interface driver usbfs
+[   20.790000] usbcore: registered new interface driver hub
+[   20.800000] usbcore: registered new device driver usb
+[   20.860000] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[   20.860000] oxnas-ehci oxnas-ehci.0: OXNAS EHCI Host Controller
+[   20.870000] oxnas-ehci oxnas-ehci.0: new USB bus registered, assigned bus number 1
+[   20.910000] oxnas-ehci oxnas-ehci.0: irq 39, io mem 0x00000000
+[   20.930000] oxnas-ehci oxnas-ehci.0: USB 0.0 started, EHCI 1.00
+[   20.940000] usb usb1: configuration #1 chosen from 1 choice
+[   20.940000] hub 1-0:1.0: USB hub found
+[   20.950000] hub 1-0:1.0: 2 ports detected
+[   21.040000] Initializing USB Mass Storage driver...
+[   21.040000] usbcore: registered new interface driver usb-storage
+[   21.050000] USB Mass Storage support registered.
+[   21.190000] RX DESC ffc17000  size = 2048
+[   21.200000] <-- RTMPAllocTxRxRingMemory, Status=0
+[   21.210000] Key1Str is Invalid key length(0) or Type(0)
+[   21.220000] Key2Str is Invalid key length(0) or Type(0)
+[   21.220000] Key3Str is Invalid key length(0) or Type(0)
+[   21.230000] Key4Str is Invalid key length(0) or Type(0)
+[   21.230000] 1. Phy Mode = 9
+[   21.240000] 2. Phy Mode = 9
+[   21.240000] NVM is Efuse and its size =2d[2d0-2fc] 
+[   21.240000] 3. Phy Mode = 9
+[   21.290000] RTMPSetPhyMode: channel is out of range, use first channel=1 
+[   21.290000] MCS Set = ff 00 00 00 01
+[   21.300000] <==== rt28xx_init, Status=0
+[   21.300000] 0x1300 = 00064300
+[   21.300000]  AUX_CTRL = 0x                            4c02
+[   21.310000]  Read AUX_CTRL = 0x4c02
+[   21.310000]  Write AUX_CTRL = 0x5c02
+[   21.320000] usb 1-1: new high speed USB device using oxnas-ehci and address 2
+[   21.320000]  OSC_CTRL = 0x3ff11
+[   21.330000] ====> rt30xx Read PowerLevelMode =  0x3.
+[   21.330000] ====> rt30xx F Write 0x83 Command = 0x3.
+[   21.470000] usb 1-1: configuration #1 chosen from 1 choice
+[   21.490000] hub 1-1:1.0: USB hub found
+[   21.490000] hub 1-1:1.0: 4 ports detected
+[   21.650000] ufsd: module license 'Commercial product' taints kernel.
+[   21.650000] Disabling lock debugging due to kernel taint
+[   21.690000] ufsd: driver 8.1 (NNTFS4LINUX_U81_039_A) with acl LBD=OFF with ioctl loaded at bf18d000
+[   21.690000] NTFS read/write support included
+[   21.690000] Hfs+/HfsX read/write support included
+Loading xce.ko:              [   21.730000] Cloud Engines XCE Init [Version: 2.5.7]
+[   21.740000] XCE: CPU MEMORY MAP:
+[   21.740000] XCE:   -- 0x00001000 - 0xbeffffff (3055 MB)  User Space Mappings
+[   21.750000] XCE:   -- 0xbf000000 - 0xbfffffff (  16 MB)  Kernel module space
+[   21.750000] XCE:   -- 0xc0000000 - 0xc7ffffff ( 128 MB)  Kernel direct-mapped ram
+[   21.760000] XCE:   -- 0xe0800000 - 0xe0ffffff (   8 MB)  Kernel vmalloc space
+[   21.770000] XCE:   -- 0xe1000000 - 0xfeffffff ( 479 MB)  Kernel platform space
+[   21.780000] XCE: CPU FEATURES:
+[   21.780000] XCE:   -- I Cache:         enabled
+[   21.790000] XCE:   -- D Cache:         enabled
+[   21.790000] XCE:   -- Branch Predict:  disabled
+[   21.790000] XCE:   -- MMU:             enabled
+[   21.800000] XCE:   -- Alignment Abort: disabled
+[   21.810000] XCE: BLPARAMS: Locating parameter block...
+[   21.810000] XCE: BLPARAMS: reading 2048 bytes @ a0000
+[   21.820000] XCE: Loaded Property Size: 2048
+[   21.820000] XCE:    - 'cesvcid' -> 'CKQX6N8X9YXVA3SKS6F94CDBEW'
+[   21.830000] XCE:    - 'ceboardver' -> 'PPRO1'
+[   21.830000] XCE: Current GPIO State:
+[   21.830000] XCE:  GPIO A input:        0xf679fff7
+[   21.840000] usb 1-1.4: new high speed USB device using oxnas-ehci and address 3
+[   21.840000] XCE:  GPIO A OE status:    0x00000000
+[   21.840000] XCE:  GPIO A IRQ enable:   0x00000000
+[   21.840000] XCE:  GPIO A IRQ event:    0x00000000
+[   21.840000] XCE:  GPIO A output state: 0x00000000
+[   21.840000] XCE:  GPIO B input:        0x0001bfef
+[   21.840000] XCE:  GPIO B OE status:    0x00030000
+[   21.840000] XCE:  GPIO B IRQ enable:   0x00000000
+[   21.840000] XCE:  GPIO B IRQ event:    0x00000000
+[   21.840000] XCE:  GPIO B output state: 0x00030000
+Success
+Starting hbplug:             Success
+/ # [   21.990000] XCE: BLPARAMS: Locating parameter block...
+[   22.000000] XCE: BLPARAMS: reading 2048 bytes @ a0000
+[   22.000000] XCE: BLPARAMS: reading 2048 bytes @ a0800
+[   22.010000] XCE: BLPARAMS: reading 2048 bytes @ a1000
+[   22.020000] XCE: BLPARAMS: reading 2048 bytes @ a1800
+[   22.020000] usb 1-1.4: configuration #1 chosen from 1 choice
+[   22.040000] scsi2 : SCSI emulation for USB Mass Storage devices
+[   24.220000] ------------[ cut here ]------------
+[   24.220000] WARNING: at kernel/softirq.c:143 local_bh_enable_ip+0x70/0xa0()
+[   24.220000] Modules linked in: xce ufsd(P) vfat fat usb_storage ehci_hcd usbcore rt3390sta gmac mii
+[   24.220000] [<c002da7c>] (unwind_backtrace+0x0/0xe8) from [<c004a8a0>] (warn_slowpath_common+0x48/0x60)
+[   24.220000] [<c004a8a0>] (warn_slowpath_common+0x48/0x60) from [<c0050958>] (local_bh_enable_ip+0x70/0xa0)
+[   24.220000] [<c0050958>] (local_bh_enable_ip+0x70/0xa0) from [<bf0e4d40>] (RtmpAsicSendCommandToMcu+0x458/0x4a4 [rt3390sta])
+[   24.220000] [<bf0e4d40>] (RtmpAsicSendCommandToMcu+0x458/0x4a4 [rt3390sta]) from [<bf074730>] (T.1817+0x2c/0x38 [rt3390sta])
+[   24.220000] [<bf074730>] (T.1817+0x2c/0x38 [rt3390sta]) from [<bf0808ac>] (AsicAdjustTxPower+0x26c/0x2d5c [rt3390sta])
+[   24.220000] [<bf0808ac>] (AsicAdjustTxPower+0x26c/0x2d5c [rt3390sta]) from [<bf03a458>] (STAMlmePeriodicExec+0x254/0xb90 [rt3390sta])
+[   24.220000] [<bf03a458>] (STAMlmePeriodicExec+0x254/0xb90 [rt3390sta]) from [<bf03b228>] (MlmePeriodicExec+0x494/0x6ac [rt3390sta])
+[   24.220000] [<bf03b228>] (MlmePeriodicExec+0x494/0x6ac [rt3390sta]) from [<bf06d84c>] (rtmp_timer_MlmePeriodicExec+0x1c/0x38 [rt3390sta])
+[   24.220000] [<bf06d84c>] (rtmp_timer_MlmePeriodicExec+0x1c/0x38 [rt3390sta]) from [<c005571c>] (run_timer_softirq+0x1b0/0x248)
+[   24.220000] [<c005571c>] (run_timer_softirq+0x1b0/0x248) from [<c0050624>] (__do_softirq+0xa8/0x140)
+[   24.220000] [<c0050624>] (__do_softirq+0xa8/0x140) from [<c005073c>] (irq_exit+0x80/0x9c)
+[   24.220000] [<c005073c>] (irq_exit+0x80/0x9c) from [<c00273b0>] (do_local_timer+0x54/0x70)
+[   24.220000] [<c00273b0>] (do_local_timer+0x54/0x70) from [<c0027c18>] (__irq_svc+0x38/0xc0)
+[   24.220000] Exception stack(0xc03e3f58 to 0xc03e3fa0)
+[   24.220000] 3f40:                                                       c03e2000 00000000 
+[   24.220000] 3f60: c03e3fa0 00000000 c03e2000 c0406804 c03e8314 c053c000 c04147e4 00001160 
+[   24.220000] 3f80: c03e8058 c0406580 c0534748 c03e3fa0 c0028b80 c0028b84 60000013 ffffffff 
+[   24.220000] [<c0027c18>] (__irq_svc+0x38/0xc0) from [<c0028b84>] (default_idle+0x24/0x28)
+[   24.220000] [<c0028b84>] (default_idle+0x24/0x28) from [<c0029270>] (cpu_idle+0x64/0x98)
+[   24.220000] [<c0029270>] (cpu_idle+0x64/0x98) from [<c0008b64>] (start_kernel+0x328/0x390)
+[   24.220000] [<c0008b64>] (start_kernel+0x328/0x390) from [<60008084>] (0x60008084)
+[   24.220000] ---[ end trace 4734bf5e9fa34062 ]---
+[   27.060000] scsi 2:0:0:0: Direct-Access     SanDisk  Cruzer Fit       1.27 PQ: 0 ANSI: 6
+[   27.080000] sd 2:0:0:0: [sda] 61056064 512-byte logical blocks: (31.2 GB/29.1 GiB)
+[   27.090000] sd 2:0:0:0: [sda] Write Protect is off
+[   27.090000] sd 2:0:0:0: [sda] Assuming drive cache: write through
+[   27.100000] sd 2:0:0:0: [sda] Assuming drive cache: write through
+[   27.110000]  sda: sda1
+[   27.150000] sd 2:0:0:0: [sda] Assuming drive cache: write through
+[   27.160000] sd 2:0:0:0: [sda] Attached SCSI removable disk
+[   27.540000] XCE: XCE: LED -> DISCONNECTED
+[   38.630000] RX DESC ffc17000  size = 2048
+[   38.640000] <-- RTMPAllocTxRxRingMemory, Status=0
+[   38.650000] Key1Str is Invalid key length(0) or Type(0)
+[   38.660000] Key2Str is Invalid key length(0) or Type(0)
+[   38.660000] Key3Str is Invalid key length(0) or Type(0)
+[   38.670000] Key4Str is Invalid key length(0) or Type(0)
+[   38.670000] 1. Phy Mode = 9
+[   38.680000] 2. Phy Mode = 9
+[   38.680000] NVM is Efuse and its size =2d[2d0-2fc] 
+[   38.690000] 3. Phy Mode = 9
+[   38.710000] RTMPSetPhyMode: channel is out of range, use first channel=1 
+[   38.710000] MCS Set = ff 00 00 00 01
+[   38.720000] <==== rt28xx_init, Status=0
+[   38.720000] 0x1300 = 00064300
+[   38.720000]  AUX_CTRL = 0x                            5d42
+[   38.730000]  Read AUX_CTRL = 0x5d42
+[   38.730000]  Write AUX_CTRL = 0x5d42
+[   38.740000]  OSC_CTRL = 0x3ff11
+[   38.740000] ====> rt30xx Read PowerLevelMode =  0x3.
+[   38.750000] ====> rt30xx F Write 0x83 Command = 0x3.
+
+/ # 

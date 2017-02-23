@@ -1,0 +1,67 @@
+<html>
+<head>
+<link rel="stylesheet" rev="stylesheet" href="dlink.css?cidx=%%FirmwareVersion();%%%%ReleaseDate();%%" type="text/css">
+<title>D-Link Corporation. | WIRELESS INTERNET CAMERA | STATUS | Wireless Client List</title>
+<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true">
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<script language="Javascript" SRC="function.js?cidx=%%FirmwareVersion();%%%%ReleaseDate();%%"></script>
+<script language="Javascript">
+function parseTime(t)
+{
+	var str=new String("");
+	var tmp=parseInt(t, [10]);
+	var sec=0,min=0,hr=0,day=0;
+	sec=t % 60;                     //sec
+	min=parseInt(t/60, [10]) % 60;  //min
+	hour=parseInt(t/(60*60), [10]); //hour
+	if(t>0)
+       str=(hour>0 ? hour+" hour(s) ":"")+(min>0 ? min+" min(s) ":"")+(sec>0 ? sec+" sec(s) ":"");
+	else
+       str="&nbsp;";
+    document.write(str);
+	return;
+}
+</script>
+<body topmargin="1" leftmargin="0" rightmargin="0">
+<table border="0" cellpadding="2" cellspacing="0" align="center" bgcolor="#FFFFFF" bordercolordark="#FFFFFF" width=100%>
+<tr>
+  <td valign="top" id="maincontent_container">
+    <div id="maincontent">
+      <!-- === BEGIN MAINCONTENT === -->
+      <div id=box_header>
+      <h1>Wireless Client List</h1>
+      </div>
+      <div class=box>
+        <table border=0 cellspacing=0 cellpadding=0 width=90%>
+        <tr><td>
+          <table cellspacing=1 cellpadding=1 BORDER=0 width=100%>
+          <TR>
+            <TD>
+              <table cellspacing=0 cellpadding=3 BORDER=1 class=maintext width=100%>
+              <TR>
+                <TD width=25%>MAC Address</TD>
+                <TD width=25%>Connect Time</TD>
+                <TD width=25%>TX Rate</TD>
+                <TD width=25%>Wireless Mode</TD>
+              </TR>
+              %%ConnectClientList(1);%%
+              </table>
+            </TD>
+          </TR>
+          </table>
+        </td></tr>
+        <tr><td>
+            <INPUT type="button" width="80" value=" Refresh " onClick='window.location.reload()'>
+            <INPUT type="button" width="80" value=" exit " onclick="window.close();">
+        </td></tr>
+        </table>
+      </div>
+      <!-- === END MAINCONTENT === -->
+    </div>                                
+  </td>
+</tr>
+</table>
+</body>
+</html>

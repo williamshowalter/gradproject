@@ -1,0 +1,2 @@
+DRIVER=hi_sfc
+MODALIAS=platform:hi_sfc

@@ -1,0 +1,15 @@
+videos=MJPEG,H.264
+resolutions=640x480,320x240,160x112
+vprofilenum=2
+vprofile1=MJPEG
+vprofileurl1=/mjpeg.cgi
+vprofileres1=%%StringOfVideoResolution();%%
+vDprofileurl1=/dgvideo.cgi
+vprofile2=H.264
+vprofileurl2=/h264.mpt
+vprofileres2=%%StringOfVideoResolution();%%
+vDprofileurl2=/dgh264.cgi
+aprofilenum=1
+aprofile1=PCM
+aprofileurl1=/audio.cgi
+aDprofileurl1=/dgaudio.cgi

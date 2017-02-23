@@ -1,0 +1,4 @@
+Target uses regular libc
+use: gcc-arm-linux-gnueabi
+
+# apt-get install gcc-arm-linux-gnueabi

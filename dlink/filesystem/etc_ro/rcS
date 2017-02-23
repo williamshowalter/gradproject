@@ -1,0 +1,86 @@
+#!/bin/sh
+
+model=`gpio model`
+if [ "$model" == "DCS-931L" ] || [ "$model" == "DCS-933L" ]; then
+cp /sbin/ov780spi_fw.bin /sbin/ov780_fw.bin
+ov780 -r 120 -i 100
+insmod /lib/uvcvideo.ko
+fi
+if [ "$model" == "DCS-5020L" ] || [ "$model" == "DCS-5010L" ]; then
+cp /sbin/ov780usb_fw.bin /sbin/ov780_fw.bin
+insmod usb_ov78x
+#ov780 -r 120 -i 100
+insmod /lib/uvcvideo_v1.1.0.ko
+ov780 -r 120 -i 100
+fi
+rm /sbin/ov780spi_fw.bin
+rm /sbin/ov780usb_fw.bin
+
+# install uvcvideo & ALSA sound modules
+#insmod /lib/modules/2.6.21/kernel/drivers/media/video/uvc/uvcvideo.ko
+insmod /lib/modules/2.6.21/kernel/sound/core/snd-rawmidi.ko
+insmod /lib/modules/2.6.21/kernel/sound/core/snd-hwdep.ko
+insmod /lib/modules/2.6.21/kernel/sound/core/snd-page-alloc.ko
+insmod /lib/modules/2.6.21/kernel/sound/core/snd-timer.ko
+insmod /lib/modules/2.6.21/kernel/sound/core/snd-pcm.ko
+insmod /lib/modules/2.6.21/kernel/sound/usb/snd-usb-lib.ko
+insmod /lib/snd-usb-audio.ko
+#insmod /lib/modules/2.6.21/kernel/sound/core/snd-usb-audio.ko
+sleep 3
+
+mount -a
+mkdir -p /var/run
+cat /etc_ro/motd
+
+# generate Dev Node
+# Linux 2.6 uses udev instead of devfs, we have to create static dev node by myself
+###mounted=`mount | grep mdev | wc -l`
+###if [ $mounted -eq 0 ]; then
+###mount -t ramfs mdev /dev
+###mkdir /dev/pts
+###mount -t devpts devpts /dev/pts
+mdev -s
+###fi
+
+###mknod   /dev/video0      c       81      0
+###mknod   /dev/spiS0       c       217     0
+###mknod   /dev/i2cM0       c       218     0
+###mknod   /dev/rdm0        c       254     0
+###mknod   /dev/flash0      c       200     0
+###mknod   /dev/swnat0      c       210     0
+###mknod   /dev/hwnat0      c       220     0
+###mknod   /dev/acl0        c       230     0
+###mknod   /dev/ac0         c       240     0
+###mknod   /dev/mtr0        c       250     0
+###mknod   /dev/gpio        c       252     0
+###mknod   /dev/pcm0        c       233     0
+###mknod   /dev/i2s0	    c	    234	    0	
+###mknod   /dev/cls0        c       235     0
+
+echo "# <device regex> <uid>:<gid> <octal permissions> [<@|$|*> <command>]" > /etc/mdev.conf
+echo "# The special characters have the meaning:" >> /etc/mdev.conf
+echo "# @ Run after creating the device." >> /etc/mdev.conf
+echo "# $ Run before removing the device." >> /etc/mdev.conf
+echo "# * Run both after creating and before removing the device." >> /etc/mdev.conf
+echo "sd[a-z][1-9] 0:0 0660 */sbin/automount.sh \$MDEV" >> /etc/mdev.conf
+echo "sd[a-z] 0:0 0660 */sbin/automount.sh \$MDEV" >> /etc/mdev.conf
+
+#able usb hot-plug feature
+echo "/bin/usb3gkit" > /proc/sys/kernel/hotplug
+nvram_daemon &
+sleep 3
+
+internet.sh
+
+# move to "gpio 3g" function for 3g model 
+#usb3gkit -v 0x2001 -p 0xa80b
+#usb3gkit -v 0x2001 -p 0x7d00
+#ppp-loop.sh &
+
+#for telnet debugging
+#security issue -- don't run here -- andy 2012-07-03
+#telnetd
+
+#for syslogd
+mkdir -p /var/log
+

@@ -1,0 +1,64 @@
+;LYD  RTS
+;地址
+;X-速度
+;Y-速度
+;支持的函数:
+; Sum(from,to)
+; Xor(from,to)
+; 
+;
+;支持的运算符
+; +、-、*、/
+; ^ 异或
+; % 取模
+;
+;运算结果都为字节
+;
+;Addr	地址
+;XSpd	水平速度
+;YSpd	垂直速度
+;Pos	预置位或轨迹号
+;Jump_spd	停驻点巡航跳转速度
+;Stay	停驻点停留时间
+
+[CtrlCode]
+Stop		= 255,Addr,0,0,0,0,Sum(1,5)%255
+PanLeft		= 255,Addr,0,4,XSpd,0,Sum(1,5)%255
+PanRight	= 255,Addr,0,2,XSpd,0,Sum(1,5)%255
+TiltUp		= 255,Addr,0,8,0,YSpd,Sum(1,5)%255
+TiltDown	= 255,Addr,0,16,0,YSpd,Sum(1,5)%255
+UpLeft		= 255, Addr, 0, 12, XSpd, YSpd, Sum(1,5)%255
+UpRight		= 255, Addr, 0, 10, XSpd, YSpd, Sum(1,5)%255
+DownLeft	= 255, Addr, 0, 20, XSpd, YSpd, Sum(1,5)%255
+DownRight	= 255, Addr, 0, 18, XSpd, YSpd, Sum(1,5)%255
+ZoomIn		= 255, Addr, 0, 32, 0, 0, Sum(1,5)%255
+ZoomOut		= 255, Addr, 0, 64, 0, 0, Sum(1,5)%255
+IrisIn		= 255, Addr, 2, 0, 0, 0, Sum(1,5)%255
+IrisOut		= 255, Addr, 4, 0, 0, 0, Sum(1,5)%255
+FocusOn		= 255, Addr, 1, 0, 0, 0, Sum(1,5)%255
+FocusOut	= 255, Addr, 0, 128, 0, 0, Sum(1,5)%255
+
+AutoScan	= 255,Addr,0x98,0,0,0,Sum(1,5)%255
+
+SetPSP 		= 255, Addr, 0, 3, 0, Pos, Sum(1,5)%255
+CallPSP		= 255, Addr, 0, 7, 0, Pos, Sum(1,5)%255
+DelPSP 		= 255, Addr, 0, 5, 0, Pos, Sum(1,5)%255
+
+SetTrackBegin	= 255, Addr, 0, 0x47, 0, Pos, Sum(1,5)%255
+SetTrack	= 255, Addr, Pos, 0x49, Jump_Spd, Stay, Sum(1,5)%255
+SetTrackEnd	= 255, Addr, 0, 0x4B, 0, 0, Sum(1,5)%255
+CallTrack	= 255, Addr, 0, 0x4F, 1, Pos, Sum(1,5)%255
+Track_Stop	= 255, Addr, 0, 0x51, 0, 0, Sum(1,5)%255
+DelTrack	= 255, Addr, 0, 0x4D, 0, Pos, Sum(1,5)%255
+
+RainBrushStart=
+RainBrushStop=
+LightOn=
+LightOff=
+
+
+[Comm]
+StopBits=0
+DataBits=8
+Parity=0
+Baudrate=2400

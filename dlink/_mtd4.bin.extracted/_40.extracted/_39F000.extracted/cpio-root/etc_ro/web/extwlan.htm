@@ -1,0 +1,403 @@
+<html>
+<head>
+<link rel="stylesheet" rev="stylesheet" href="dlink.css?cidx=%%FirmwareVersion();%%%%ReleaseDate();%%" type="text/css">
+<title>D-Link Corporation. | WIRELESS INTERNET CAMERA | SETUP | EXTENDED SETUP</title>
+<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true">
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<script language="Javascript" SRC="function.js?cidx=%%FirmwareVersion();%%%%ReleaseDate();%%"></script>
+<script language="Javascript">
+function clickChkBOX()
+{
+  frm = document.forms[0];
+  if (frm.TmpWirelessMode.checked)
+     frm.WirelessMode.value = 1;
+  else
+     frm.WirelessMode.value = 0;
+  clickAUTO();
+}
+
+function clickAUTO()
+{
+  frm = document.forms[0];
+  if (frm.WirelessMode.value == 1)
+     frm.TmpWirelessMode.checked = true;
+  else
+     frm.TmpWirelessMode.checked = false;
+  if (frm.WirelessMode.value == 1)
+  {
+     enable_box(id_basic);
+     frm.APKeyLenSel.value = frm.APWEPKeyLen.value;
+     frm.APKeyFormatSel.value = frm.APWEPKeyFormat.value;
+     CheckKey();
+  }
+  else
+  {
+     disable_box(id_basic);
+     disable_box(id_security);
+     disable_box(id_wep);
+     disable_box(id_wpa);
+     if (frm.APExtendName[0].checked)
+     {
+        hide("id_security");
+        hide("id_wep");
+        hide("id_wpa");
+     }
+  }
+}
+
+function CheckKey()
+{
+  frm = document.forms[0];
+  if (frm.APExtendName[0].checked)
+  {
+     frm.APSSID.disabled = true;
+     hide("id_security");
+     hide("id_wep");
+     hide("id_wpa");
+  } else {
+     frm.APSSID.disabled = false;
+     show("id_security");
+     enable_box(id_security);
+     if (frm.APWEPEncryWay[0].checked)
+     {
+        hide("id_wep");
+        hide("id_wpa");
+        disable_box(id_wep);
+        disable_box(id_wpa);
+        frm.APWEPEncryption.value = 0;
+        frm.APKey1.maxLength = 0;
+     }
+     if (frm.APWEPEncryWay[1].checked)
+     {
+        show("id_wep");
+        hide("id_wpa");
+        enable_box(id_wep);
+        disable_box(id_wpa);
+        frm.APWEPKeyFormat.value = frm.APKeyFormatSel.value;
+        if (frm.APKeyLenSel.value == 0)
+        {
+           frm.APWEPEncryption.value = 2;
+           if (frm.APKeyFormatSel.value == 0)
+              frm.APKey1.maxLength = 5;
+           else
+              frm.APKey1.maxLength = 10;
+        }
+        if (frm.APKeyLenSel.value == 1)
+        {
+           frm.APWEPEncryption.value = 3;
+           if (frm.APKeyFormatSel.value == 0)
+              frm.APKey1.maxLength = 13;
+           else
+              frm.APKey1.maxLength = 26;
+        }
+     }
+     if (frm.APWEPEncryWay[2].checked)
+     {
+        hide("id_wep");
+        show("id_wpa");
+        disable_box(id_wep);
+        enable_box(id_wpa);
+        frm.APWEPEncryption.value = 4;
+     }
+   }
+}
+
+function ClickSubmit()
+{
+  frm = document.forms[0];
+  if (frm.WirelessMode.value == 0)
+  {
+     javascript:document.forms[0].submit();
+     return;
+  }
+  //if (frm.APExtendName[1].checked)
+  //{
+  //   frm.APSSID.select();
+  //   alert("The new wireless network name is empty.");
+  //   return;
+  //}
+  if (frm.APWEPEncryWay[1].checked)
+  {
+     if (frm.APKeyLenSel.value == 0)		// 64 bits
+     {
+        if (frm.APKeyFormatSel.value == 0)	// ASCII = 5
+        {
+          if (frm.APKey1.value.length != 5)
+          {
+             frm.APKey1.select();
+             alert("The format of Key must be 5 ASCII characters");
+             return;
+          }
+          if (frm.APKey1.value.length != 5)
+          	frm.APKey1.value = "";
+        }
+        else					// HEX = 10
+        {
+          if ((frm.APKey1.value.length != 10) || (CheckHex(frm.APKey1.value) == 1))
+          {
+             frm.APKey1.select();
+             alert("The format of Key must be 10 HEX characters");
+             return;
+          }
+          if ((frm.APKey1.value.length != 10) || (CheckHex(frm.APKey1.value) == 1))
+          	frm.APKey1.value = "";
+        }
+     }
+     else
+     {						// 128 bits
+        if (frm.APKeyFormatSel.value == 0)	// ASCII = 13
+        {
+          if (frm.APKey1.value.length != 13)
+          {
+             frm.APKey1.select();
+             alert("The format of Key must be 13 ASCII characters");
+             return;
+          }
+          if (frm.APKey1.value.length != 13)
+          	frm.APKey1.value = "";
+        }
+        else					// HEX = 26
+        {
+          if ((frm.APKey1.value.length != 26) || (CheckHex(frm.APKey1.value) == 1))
+          {
+             frm.APKey1.select();
+             alert("The format of Key must be 26 HEX characters");
+             return;
+          }
+          if ((frm.APKey1.value.length != 26) || (CheckHex(frm.APKey1.value) == 1))
+          	frm.APKey1.value = "";
+        }
+     }
+  }
+  if (frm.APWEPEncryWay[2].checked)
+  {
+     if ((CheckWPAKey(frm.APPreSharedKey.value)) == 1)
+     {
+        frm.APPreSharedKey.select();
+        alert("The format of Pre-Shared Key is invalid.");
+        return;
+     }
+  }
+  javascript:document.forms[0].submit();
+}
+
+function ClickCancel()
+{
+  Browser = CheckBrower();
+  if ((Browser == "IE10") || (Browser == "Opera") || (Browser == "Safari") || (Browser == "Chrome") || (Browser == "Firefox"))
+     location.href="extwlan.htm";
+  else {
+     javascript:document.forms[0].reset();
+     clickAUTO();
+     CheckKey();
+  }
+}
+</script>
+</head>
+<body topmargin="1" leftmargin="0" rightmargin="0" bgcolor="#757575">
+<table id="header_container" border="0" cellpadding="5" cellspacing="0" width="838" align="center">
+<tr>
+<td width="100%">Product: <a href="http://support.dlink.com/" target="_blank">%%ModelName();%%</a></td>
+  <td align="right" nowrap></td>
+  <td align="right" nowrap>Firmware version: %%FirmwareVersion();%% &nbsp;</td>
+</tr>
+</table>
+<div id="title_container">
+<table id="topnav_container" border="0" cellpadding="0" cellspacing="0" width="838" align="center">
+<tr><td align="center" valign="middle"><img src="title.gif"></td></tr>
+</table>
+</div>
+<table id="index_container" border="0" cellpadding="2" cellspacing="1" width="838" align="center" bgcolor="#FFFFFF">
+<tr id="topnav_container">
+  <td><img src="devmodel.jpg?cidx=%%ModelName();%%"></td>
+  <td id="topnavoff"><a href="home.htm">Live Video</a></td>
+  <td id="topnavon"><a href="wizard.htm">Setup</a></td>
+  <td id="topnavoff"><a href="advanced.htm">Maintenance</a></td>
+  <td id="topnavoff"><a href="stsdev.htm">Status</a></td>
+  <td id="topnavoff"><a href="support.htm">Help</a></td>
+  <td id="index_space" width="640" style="display:none;"></td>
+</tr>
+<tr><td colspan=6 height=1 bgcolor="#ffffff"></td></tr>
+</table>
+<table id="space_container" border="0" cellpadding="0" cellspacing="0" width="838" align="center" bgcolor="#FFFFFF" bordercolordark="#FFFFFF" height=50%>
+<tr><td height=1 bgcolor="#000000"></td></tr>
+<tr><td>
+<table id="data_container" border="0" cellpadding="0" cellspacing="0" width="838" align="center" bgcolor="#FFFFFF" bordercolordark="#FFFFFF" height=100%>
+<tr>
+  <td valign="top" width="131" height="100%" align="right">
+    <!-- === BEGIN SIDENAV === -->
+    <table border="0" cellpadding="1" cellspacing="1" height=100% bgcolor="#FFFFFF">
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="wizard.htm">Wizard</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="network.htm">Network Setup</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="wireless.htm">Wireless Setup</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavon"><a href="extwlan.htm">Extender Setup</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="ddns.htm">Dynamic DNS</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="image.htm">Image Setup</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="video.htm">Video</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="audio.htm">Audio</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="motion.htm">Motion Detection</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="sounddb.htm">Sound Detection</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="email.htm">Mail</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="upload.htm">FTP</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="time.htm">Time and Date</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="night.htm">Day/Night Mode</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="logout.htm">Logout</a></td></tr>
+    <tr id="sidenav_container" height=100%><td id="sidenavoff" align="center" valign="top">&nbsp;</td></tr>
+    </table>
+    <!-- === END SIDENAV === -->
+  </td>
+  <td valign="top" id="maincontent_container" height="750">
+    <table height="750" width=100% border="0" cellpadding="0" cellspacing="0" bgcolor="white">
+    <tr><td>
+    <div id="maincontent">
+      <!-- === BEGIN MAINCONTENT === -->
+      <div id="box_header"> 
+      <h1>Extender Setup</h1>
+      In this section, you can configure the wireless extender feature of your camera, which allows you to extend the range of an existing wireless network. You can choose to keep the same wireless network name for the extended network, or you can create a new one.
+      <br><br><b>Please note that you must be connected to another wireless network through the <a href="wireless.htm">Wireless Setup</a> page in order to use Extender Mode and configure these settings.</b>
+<FORM ACTION="/setSystemWireless" METHOD="POST" autocomplete="off">
+        <input type="hidden" name="ReplySuccessPage" value="extwlan.htm">
+        <input type="hidden" name="ReplyErrorPage" value="errrextw.htm">
+        <input type="hidden" name="WirelessMode" value="%%WirelessMode();%%">
+        <input type="hidden" name="APWEPEncryption" value="%%APWEPEncryption();%%">
+        <input type="hidden" name="APWEPKeyFormat" value="%%APWEPKeyFormat();%%">
+        <input type="hidden" name="APWEPKeyLen" value="%%APWEPKeyLen();%%">
+        <div align=center>
+        &nbsp;<input type="button" width="80" value=" Save Settings " onclick="ClickSubmit()">
+        &nbsp;&nbsp;<input type="button" width="80" value=" Don't Save Settings " onclick="ClickCancel()">
+        </div>
+      </div>
+      <div class="box">
+        <h2>Extended Wireless Network settings</h2>
+        <table cellpadding="2" cellspacing="1" border="0" width="534" bgcolor="white" bordercolor="#FFFFFF">
+        <TR>
+          <TD width="240">&nbsp;Enable Extender Mode</TD>
+          <TD colspan=2><input type="checkbox" id="TmpWirelessMode" onclick="clickChkBOX()"></TD>
+        </TR>
+        </table>
+       <div id="id_basic">
+        <table cellpadding="2" cellspacing="1" border="0" width="534" bgcolor="white" bordercolor="#FFFFFF">
+        <TR>
+          <TD width="240">&nbsp;Host Wireless Network Name</TD>
+          <TD colspan=2>&nbsp;%%SSID();%%</TD>
+        </TR>
+        <TR>
+          <TD nowrap>&nbsp;Extended Wireless Network Name (SSID)</TD>
+          <TD width="5"><input type=radio name=APExtendName value=0 OnClick="CheckKey()" %%RadioOfAPExtendName(0);%%></TD>
+          <TD>Same as Host Wireless Network Name</TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD><input type=radio name=APExtendName value=1 OnClick="CheckKey()" %%RadioOfAPExtendName(1);%%></TD>
+          <TD>Create a new Wireless Network Name</TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD></TD>
+          <TD><input type="text" size=20 maxlength=32 name="APSSID" value="%%APSSID();%%"></TD>
+        </TR>
+        <TR>
+          <TD nowrap>&nbsp;Maximum clients allowed to connect</TD>
+          <TD colspan=2>&nbsp;<SELECT name="APMaxClient" size="1">%%SelectOfAPMaxClient(2);%%</SELECT></TD>
+        </TR>
+        </table>
+       </div>
+      </div>
+      <div id="id_security" class="box">
+        <h2>Extended Wireless Network Security</h2>
+        <table cellpadding="2" cellspacing="1" border="0" width="534" bgcolor="white" bordercolor="#FFFFFF">
+        <TR>
+          <TD width="23%">Security Mode</TD>
+          <TD>
+            <input type=radio name=APWEPEncryWay value=0 %%RadioOfAPWEPEncryWay(0);%% onclick="CheckKey()">None&nbsp;&nbsp;
+            <input type=radio name=APWEPEncryWay value=2 %%RadioOfAPWEPEncryWay(2);%% onclick="CheckKey()">WEP&nbsp;&nbsp;
+            <input type=radio name=APWEPEncryWay value=4 %%RadioOfAPWEPEncryWay(4);%% onclick="CheckKey()">WPA-PSK / WPA2-PSK&nbsp;&nbsp;
+          </TD>
+        </TR>
+        </table>
+      </div>
+      <div id="id_wep" class="box" style="DISPLAY: none">
+        <h2>WEP Settings</h2>
+        <table cellpadding="2" cellspacing="1" border="0" width="534" bgcolor="white" bordercolor="#FFFFFF">
+        <TR id="id_auth">
+          <TD width="23%">Authentication</TD>
+          <TD>
+            <input type=radio name=APAuthenticationType value=0 %%RadioOfAPAuthenticationType(0);%%>Open System&nbsp;
+            <input type=radio name=APAuthenticationType value=1 %%RadioOfAPAuthenticationType(1);%%>Shared Key&nbsp;
+            <input type=radio name=APAuthenticationType value=2 %%RadioOfAPAuthenticationType(2);%%>Both
+          </TD>
+        </TR>
+        <TR>
+          <TD width="23%">Encryption Mode</TD>
+          <TD>
+            &nbsp;<SELECT id="APKeyLenSel" size="1" onchange="CheckKey()" onclick="CheckKey()">
+            <OPTION value=0>64Bits</OPTION>
+            <OPTION value=1>128Bits</OPTION>
+            </SELECT>
+          </TD>
+        </TR>
+        <TR>
+          <TD>Key Format</TD>
+          <TD>
+            &nbsp;<SELECT id="APKeyFormatSel" size="1" onchange="CheckKey()" onclick="CheckKey()">
+            <OPTION value=1>HEX</OPTION>
+            <OPTION value=0>ASCII</OPTION>
+            </SELECT>
+          </TD>
+        </TR>
+        <TR>
+          <TD>Key</TD>
+          <TD>&nbsp;<input type="password" size=32 name="APKey1" OnClick="clickCheckKey(1)" value="%%APKey1();%%"></TD>
+        </TR>
+        </table>
+      </div>
+      <div id="id_wpa" class="box" style="DISPLAY: none">
+        <h2>WPA-PSK / WPA2-PSK Settings</h2>
+        <table cellpadding="2" cellspacing="1" border="0" width="534" bgcolor="white" bordercolor="#FFFFFF">
+        <TR>
+          <TD width="23%">Pre-Shared Key</TD>
+          <TD><input type="password" size=24 maxlength=64 name="APPreSharedKey" value="%%APPreSharedKey();%%"> (8-63 ASCII or 64 HEX characters)</TD>
+        </TR>
+        </table>
+      </div>
+      <p align=center>
+        <input type="hidden" name="ConfigSystemWireless" value="Save">
+        &nbsp;<input type="button" width="80" value=" Save Settings " onclick="ClickSubmit()">
+        &nbsp;&nbsp;<input type="button" width="80" value=" Don't Save Settings " onclick="ClickCancel()">
+      </p>
+</FORM>
+      <!-- === END MAINCONTENT === -->
+    </div>
+    </td></tr>
+    <tr height=100%><td></td></tr>
+    </table>
+  </td>
+  <td valign="top" width="150" id="sidehelp_container" align="left">
+    <table cellpadding="2" cellspacing="0" border="0" bgcolor="#FFFFFF" bordercolor="#FFFFFF" bordercolordark="#FFFFFF" bordercolorlight="#FFFFFF">
+    <tr>
+      <td id="help_text">
+        <b>Helpful Hints..</b>
+        <br><br>For security there are three choices of wireless encryption, <b>None</b>, <b>WEP</b>, and <b>WPA-PSK / WPA2-PSK</b>. Select the same encryption method that is being used by your wireless device/ router. If you have selected <b>WPA-PSK or WPA2-PSK</b> setting, you may need to enter the appropriate <b>Pre-Shared Key</b> in order to connect to the wireless network.
+      </td>
+    </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td></tr></table>
+<table id="footer_container" border="0" cellpadding="0" cellspacing="0" width="838" align="center">
+<tr>
+  <td width="125" align="center">&nbsp;&nbsp;<img src="security.gif" width="114" height="35"></td>
+  <td width="10">&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+</table><br>
+<div align="center"><FONT color=#ffffff>Copyright 2012 - 2014, D-Link Corporation / D-Link Systems, Inc. All rights reserved.</font></div>
+<br>
+<script language="Javascript">
+clickAUTO();
+</script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+DRIVER=hi_mci
+MODALIAS=platform:hi_mci

@@ -1,0 +1,15 @@
+model=%%ModelName();%%
+brand=%%Company();%%
+version=%%FirmwareVersion();%%
+name=%%CameraName();%%
+location=%%Location();%%
+macaddr=%%MACAddress(2);%%
+ipaddr=%%CurrentIPAddress();%%
+netmask=%%CurrentSubnetMask();%%
+gateway=%%CurrentDefaultGateway();%%
+wireless=%%WirelessSupport();%%
+ptz=%%PTZSupport();%%
+inputs=0
+outputs=0
+speaker=no
+videoout=no

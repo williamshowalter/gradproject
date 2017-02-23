@@ -1,0 +1,64 @@
+#! /bin/sh
+
+. /etc/cefs.conf
+if /usr/local/cloudengines/bin/blparam | grep ethaddr > /tmp/ethaddr; then
+	. /tmp/ethaddr
+fi
+rm -f /tmp/ethaddr
+if /usr/local/cloudengines/bin/blparam | grep cedebug > /tmp/cedebug; then
+	. /tmp/cedebug
+fi
+rm -f /tmp/cedebug
+
+mount -t proc none /proc
+mount -t sysfs none /sys
+mount -t devpts none /dev/pts
+mount -t tmpfs none /tmp
+mkdir /tmp/var
+
+echo "/tmp/core_%e_%t" > /proc/sys/kernel/core_pattern
+
+hostname PogoplugPro
+
+#This is to enable PCIe Pre-Emphasis on PCIeA
+/sbin/devmem2 0x44a00000 w 0x14
+/sbin/devmem2 0x44a00004 w 0x4ce10
+/sbin/devmem2 0x44a00004 w 0x2ce10
+ 
+/sbin/devmem2 0x44a00000 w 0x2004
+/sbin/devmem2 0x44a00004 w 0x482c7
+/sbin/devmem2 0x44a00004 w 0x282c7
+
+ifconfig lo 127.0.0.1
+modprobe mii
+modprobe gmac gmac_offload_tx=0
+insmod /lib/modules/2.6.31.6_SMP_820/kernel/drivers/net/wireless/rt3390sta.ko
+if [ "x$ethaddr" != "x" ]; then 
+	ifconfig eth0 hw ether $ethaddr
+else
+if [ "x$ceethhwaddr" != "x" ]; then
+	ifconfig eth0 hw ether $ceethhwaddr
+fi
+fi
+ifconfig eth0 up
+# NB: Needs to start with "udhcpc -b " so hbplug_netmgr can find in /proc
+udhcpc -b -i eth0 -H `hostname`
+
+modprobe usbcore
+modprobe ehci-hcd
+modprobe usb-storage
+modprobe fat
+modprobe vfat
+mount -t usbfs none /proc/bus/usb
+
+/etc/init.d/db
+
+if [ "x$cedebug" != "x" ]; then 
+    telnetd
+    /usr/sbin/dropbear
+fi
+
+ifconfig ra0 up # Moved here to avoid race
+/etc/init.d/hbmgr.sh start
+
+#/bin/mount -a

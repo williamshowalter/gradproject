@@ -1,0 +1,9 @@
+#EXTM3U
+#EXT-X-MEDIA-SEQUENCE:0
+#EXT-X-TARGETDURATION:%%LiveStreamingDuration();%%
+#EXTINF:%%LiveStreamingDuration();%%, no desc
+%%JavaCodeBase();%%%%LiveStreamingFile1();%%
+#EXTINF:%%LiveStreamingDuration();%%, no desc
+%%JavaCodeBase();%%%%LiveStreamingFile2();%%
+#EXTINF:%%LiveStreamingDuration();%%, no desc
+%%JavaCodeBase();%%%%LiveStreamingFile3();%%

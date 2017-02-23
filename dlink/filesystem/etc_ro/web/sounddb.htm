@@ -1,0 +1,310 @@
+<html>
+<head>
+<link rel="stylesheet" rev="stylesheet" href="dlink.css?cidx=%%FirmwareVersion();%%%%ReleaseDate();%%" type="text/css">
+<title>D-Link Corporation. | WIRELESS INTERNET CAMERA | SETUP | SOUND DETECTION</title>
+<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true">
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<script language="Javascript" SRC="function.js?cidx=%%FirmwareVersion();%%%%ReleaseDate();%%"></script>
+<script language="Javascript" SRC="deployJava.js?cidx=%%FirmwareVersion();%%%%ReleaseDate();%%"></script>
+<script language="Javascript">
+var jreversions = deployJava.getJREs();
+function clickCheck()
+{
+  frm = document.forms[0];
+  frm.LevelSel.value = frm.SoundDetectionDB.value;
+  if (frm.SoundDetectionEnable[0].checked)
+  {
+     enable_box(id_box_sound);
+     enable("LevelSel");
+     if (frm.SoundDetectionSchedule.checked)
+     {
+        enable("SoundDetectionDay1");
+        enable("SoundDetectionDay2");
+        enable("SoundDetectionDay3");
+        enable("SoundDetectionDay4");
+        enable("SoundDetectionDay5");
+        enable("SoundDetectionDay6");
+        enable("SoundDetectionDay0");
+        enable("SoundDetectionDayS");
+        enable("SoundDetectionDayE");
+     }
+     else
+     {
+        disable("SoundDetectionDay1");
+        disable("SoundDetectionDay2");
+        disable("SoundDetectionDay3");
+        disable("SoundDetectionDay4");
+        disable("SoundDetectionDay5");
+        disable("SoundDetectionDay6");
+        disable("SoundDetectionDay0");
+        disable("SoundDetectionDayS");
+        disable("SoundDetectionDayE");
+     }
+  }
+  else
+  {
+     disable_box(id_box_sound);
+     disable("LevelSel");
+  }
+}
+function ClickSubmit()
+{
+  frm = document.forms[0];
+  if (frm.SoundDetectionEnable[0].checked)
+  {
+     if (frm.SoundDetectionSchedule.checked)
+     {
+        if ((!frm.SoundDetectionDay1.checked) && (!frm.SoundDetectionDay2.checked) &&
+            (!frm.SoundDetectionDay3.checked) && (!frm.SoundDetectionDay4.checked) &&
+            (!frm.SoundDetectionDay5.checked) && (!frm.SoundDetectionDay6.checked) &&
+            (!frm.SoundDetectionDay0.checked))
+        {
+           frm.SoundDetectionDay2.select();
+           alert("The selection of schedule day is invalid.");
+           return;
+        }
+        if (time_check(frm.SoundDetectionDayS.value) == 1)
+        {
+           frm.SoundDetectionDayS.select();
+           alert("The format of Start Time is invalid.");
+           return;
+        }
+        if (time_check(frm.SoundDetectionDayE.value) == 1)
+        {
+           frm.SoundDetectionDayE.select();
+           alert("The format of Stop Time is invalid.");
+           return;
+        }
+        if (time_check(frm.SoundDetectionDayS.value) == time_check(frm.SoundDetectionDayE.value))
+        {
+           frm.SoundDetectionDayS.select();
+           alert("The range of Time Period is invalid.");
+           return;
+        }
+     }
+  }
+  javascript:document.forms[0].submit();
+}
+function ClickCancel()
+{
+  Browser = CheckBrower();
+  if ((Browser == "IE10") || (Browser == "Opera") || (Browser == "Safari") || (Browser == "Chrome") || (Browser == "Firefox"))
+     location.href="sounddb.htm";
+  else {
+     javascript:document.forms[0].reset();
+     clickCheck();
+  }
+}
+function clickSoundDBScheduleDay(cid,bit)
+{
+  frm = document.forms[0];
+  checkid = document.getElementById(cid);
+  check = 0x01 << (bit);
+  value = parseInt(frm.SoundDetectionScheduleDay.value,10);
+  if (checkid.checked)
+     value |= check;
+  else
+     value ^= (check);
+  frm.SoundDetectionScheduleDay.value = value.toString();
+}
+</script>
+</head>
+<body topmargin="1" leftmargin="0" rightmargin="0" bgcolor="#757575">
+<table id="header_container" border="0" cellpadding="5" cellspacing="0" width="838" align="center">
+<tr>
+<td width="100%">Product: <a href="http://support.dlink.com/" target="_blank">%%ModelName();%%</a></td>
+  <td align="right" nowrap></td>
+  <td align="right" nowrap>Firmware version: %%FirmwareVersion();%% &nbsp;</td>
+</tr>
+</table>
+<div id="title_container">
+<table id="topnav_container" border="0" cellpadding="0" cellspacing="0" width="838" align="center">
+<tr><td align="center" valign="middle"><img src="title.gif"></td></tr>
+</table>
+</div>
+<table id="index_container" border="0" cellpadding="2" cellspacing="1" width="838" align="center" bgcolor="#FFFFFF">
+<tr id="topnav_container">
+  <td><img src="devmodel.jpg?cidx=%%ModelName();%%"></td>
+  <td id="topnavoff"><a href="home.htm">Live Video</a></td>
+  <td id="topnavon"><a href="wizard.htm">Setup</a></td>
+  <td id="topnavoff"><a href="advanced.htm">Maintenance</a></td>
+  <td id="topnavoff"><a href="stsdev.htm">Status</a></td>
+  <td id="topnavoff"><a href="support.htm">Help</a></td>
+  <td id="index_space" width="640" style="display:none;"></td>
+</tr>
+<tr><td colspan=6 height=1 bgcolor="#ffffff"></td></tr>
+</table>
+<table id="space_container" border="0" cellpadding="0" cellspacing="0" width="838" align="center" bgcolor="#FFFFFF" bordercolordark="#FFFFFF" height=50%>
+<tr><td height=1 bgcolor="#000000"></td></tr>
+<tr><td>
+<table id="data_container" border="0" cellpadding="0" cellspacing="0" width="838" align="center" bgcolor="#FFFFFF" bordercolordark="#FFFFFF" height=100%>
+<tr>
+  <td valign="top" width="131" height="100%" align="right">
+    <!-- === BEGIN SIDENAV === -->
+    <table border="0" cellpadding="1" cellspacing="1" height=100% bgcolor="#FFFFFF">
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="wizard.htm">Wizard</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="network.htm">Network Setup</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="wireless.htm">Wireless Setup</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="extwlan.htm">Extender Setup</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="ddns.htm">Dynamic DNS</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="image.htm">Image Setup</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="video.htm">Video</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="audio.htm">Audio</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="motion.htm">Motion Detection</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavon"><a href="sounddb.htm">Sound Detection</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="email.htm">Mail</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="upload.htm">FTP</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="time.htm">Time and Date</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="night.htm">Day/Night Mode</a></td></tr>
+    <tr id="sidenav_container"><td id="sidenavoff"><a href="logout.htm">Logout</a></td></tr>
+    <tr id="sidenav_container" height=100%><td id="sidenavoff" align="center" valign="top">&nbsp;</td></tr>
+    </table>
+    <!-- === END SIDENAV === -->
+  </td>
+  <td valign="top" id="maincontent_container" height="420">
+    <table height="420" width=100% border="0" cellpadding="0" cellspacing="0" bgcolor="white">
+    <tr><td>
+    <div id="maincontent">
+      <!-- === BEGIN MAINCONTENT === -->
+      <div id="box_header"> 
+      <h1>Sound Detection</h1>
+		In this section, you can configure the sound detection settings for your camera.
+		<br><br>Please note that your computer needs to have Java installed in order to view the sound dB/Time window. If you do not see the sound dB/Time window below, please visit <a href="http://www.java.com">http://www.java.com</A> to download and install Java.
+<FORM ACTION="/setSystemSoundDB" METHOD="POST" autocomplete="off">
+        <input type="hidden" name="ReplySuccessPage" value="sounddb.htm">
+        <input type="hidden" name="ReplyErrorPage" value="sounddb.htm">
+        <div align=center>
+        &nbsp;<INPUT type="button" width="80" value=" Save Settings "  onclick="ClickSubmit()">
+        &nbsp;&nbsp;<INPUT type="button" width="80" value=" Don't Save Settings " onclick="ClickCancel()">
+        </div>
+      </div>
+      <div class="box">
+        <h2>Sound Detection Settings</h2>
+        <table cellpadding="2" cellspacing="1" border="0" width="670" bgcolor="white" bordercolor="#FFFFFF">
+        <TR>
+          <TD width="137">Sound Detection</TD>
+          <TD width="533">
+            <input type=radio name=SoundDetectionEnable value=1 %%RadioOfSoundDetectionEnable(1);%% onclick="clickCheck()">Enable
+            &nbsp;&nbsp;&nbsp;<input type=radio name=SoundDetectionEnable value=0 %%RadioOfSoundDetectionEnable(0);%% onclick="clickCheck()">Disable
+          </TD>
+        </TR>
+        <TR>
+         <TD valign="top" style="padding: 12px 0px 0px 2px;">Time</TD><TD style="padding: 0px 0px 0px 6px;">
+            <input type="hidden" id="SoundDetectionScheduleDay" name="SoundDetectionScheduleDay" value="%%SoundDetectionScheduleDay();%%">
+            <table id="id_box_sound"  BORDER=1 class=maintext>
+            <tr><td><input type=radio id="SoundDetectionAlways" name="SoundDetectionScheduleMode" value=0 %%RadioOfSoundDetectionScheduleMode(0);%% onclick="clickCheck()">Always</td></tr>
+            <tr>
+              <td>
+                <table BORDER=0 cellspacing=0 cellpadding=0 class=maintext>
+                <tr>
+                  <td><input type=radio id="SoundDetectionSchedule" name="SoundDetectionScheduleMode" value=1 %%RadioOfSoundDetectionScheduleMode(1);%% onclick="clickCheck()"></td>
+                  <td colspan=2>Schedule</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Day</td>
+                  <td>
+                    <input type="checkbox" id="SoundDetectionDay1" %%CheckOfSoundDetectionScheduleDay(1);%% onclick="clickSoundDBScheduleDay('SoundDetectionDay1',1)">Mon&nbsp;
+                    <input type="checkbox" id="SoundDetectionDay2" %%CheckOfSoundDetectionScheduleDay(2);%% onclick="clickSoundDBScheduleDay('SoundDetectionDay2',2)">Tue&nbsp;
+                    <input type="checkbox" id="SoundDetectionDay3" %%CheckOfSoundDetectionScheduleDay(3);%% onclick="clickSoundDBScheduleDay('SoundDetectionDay3',3)">Wed&nbsp;
+                    <input type="checkbox" id="SoundDetectionDay4" %%CheckOfSoundDetectionScheduleDay(4);%% onclick="clickSoundDBScheduleDay('SoundDetectionDay4',4)">Thu&nbsp;
+                    <input type="checkbox" id="SoundDetectionDay5" %%CheckOfSoundDetectionScheduleDay(5);%% onclick="clickSoundDBScheduleDay('SoundDetectionDay5',5)">Fri&nbsp;
+                    <input type="checkbox" id="SoundDetectionDay6" %%CheckOfSoundDetectionScheduleDay(6);%% onclick="clickSoundDBScheduleDay('SoundDetectionDay6',6)">Sat&nbsp;
+                    <input type="checkbox" id="SoundDetectionDay0" %%CheckOfSoundDetectionScheduleDay(0);%% onclick="clickSoundDBScheduleDay('SoundDetectionDay0',0)">Sun
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td valign=top style="padding: 4px 0px 0px 0px;">Time Period</td>
+                  <td>&nbsp;&nbsp;Start : <INPUT type="text" id="SoundDetectionDayS" size=12 name="SoundDetectionScheduleTimeStart" value="%%SoundDetectionScheduleTimeStart();%%"> (Example : 06:30:00)<br>
+                      &nbsp;&nbsp;Stop : <INPUT type="text" id="SoundDetectionDayE" size=12 name="SoundDetectionScheduleTimeStop" value="%%SoundDetectionScheduleTimeStop();%%"> (Example : 22:30:00)
+                  </td>
+                </tr>
+                </table>
+              </td>
+            </tr>
+            </table>
+          </TD>
+        </TR>
+        <TR>
+          <TD>Detection Level</TD>
+          <TD>
+            <INPUT type="HIDDEN" name="SoundDetectionDB" value="%%SoundDetectionDB();%%">
+            &nbsp;<SELECT id="LevelSel" size="1" onchange="document.forms[0].SoundDetectionDB.value = this.value">
+            <OPTION value=50>50</OPTION>
+            <OPTION value=55>55</OPTION>
+            <OPTION value=60>60</OPTION>
+            <OPTION value=65>65</OPTION>
+            <OPTION value=70>70</OPTION>
+            <OPTION value=75>75</OPTION>
+            <OPTION value=80>80</OPTION>
+            <OPTION value=85>85</OPTION>
+            <OPTION value=90>90</OPTION>
+            </SELECT> dB
+          </TD>
+        </TR>
+        </table>
+        <table cellpadding="2" cellspacing="1" border="0" width="534" bgcolor="white" bordercolor="#FFFFFF">
+        <TR><TD colspan=2 style="padding: 3px 0px 3px 10px;">dB</TD></TR>
+        <TR>
+          <TD bgcolor="white">            
+            <span id="id_jre" style="color:red;display:none;"><br><br><b>Please visit <a href="http://www.java.com">http://www.java.com</A> to download and install Java.</b><br><br><br></span>
+            <script language="Javascript">
+            if (jreversions == "") {
+                id_jre.style.display='';
+            } else {
+              document.write('<applet name=\"cvcs\" codeBase=\"%%JavaCodeBase();%%\" archive=\"sounddb.jar\" code=\"sounddb.class\" width=\"576\" height=\"240\">');
+              document.write('<param name=\"RemotePort\" value=\"%%RemoteHostPort();%%\">');
+              document.write('<param name=\"DetectionLevel\" value=\"%%SoundDetectionDB();%%\">');
+              document.write('<param name=\"Algorithm\" value=\"1\">');
+              document.write('<param name=\"DeviceSerialNo\" value=\"%%Authroized();%%\">');
+              document.write('</applet>');
+            }
+            </script>
+           </TD>
+           <TD valign=bottom>Time</TD>
+        </TR>
+        </table>
+      </div>
+      <p align=center>
+        <input type="hidden" name="ConfigSystemSoundDB" value="Save">
+        &nbsp;<INPUT type="button" width="80" value=" Save Settings "  onclick="ClickSubmit()">
+        &nbsp;&nbsp;<INPUT type="button" width="80" value=" Don't Save Settings " onclick="ClickCancel()">
+      </p>
+</FORM>
+      <!-- === END MAINCONTENT === -->
+    </div>
+    </td></tr>
+    <tr height=100%><td></td></tr>
+    </table>
+  </td>
+<!---- 
+  <td valign="top" width="150" id="sidehelp_container" align="left">
+    <table cellpadding="2" cellspacing="0" border="0" bgcolor="#FFFFFF" bordercolor="#FFFFFF" bordercolordark="#FFFFFF" bordercolorlight="#FFFFFF">
+    <tr>
+      <td id="help_text">
+        <b>Helpful Hints..</b>
+      </td>
+    </tr>
+    </table>
+  </td>
+----->
+</tr>
+</table>
+</td></tr></table>
+<table id="footer_container" border="0" cellpadding="0" cellspacing="0" width="838" align="center">
+<tr>
+  <td width="125" align="center">&nbsp;&nbsp;<img src="security.gif" width="114" height="35"></td>
+  <td width="10">&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+</table><br>
+<div align="center"><FONT color=#ffffff>Copyright 2012 - 2014, D-Link Corporation / D-Link Systems, Inc. All rights reserved.</font></div>
+<br>
+</body>
+<script language="Javascript">
+clickCheck();
+</script>
+</html>

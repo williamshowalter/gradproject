@@ -1,0 +1,21 @@
+
+bootdelay=1
+baudrate=115200
+bootfile="uImage"
+ethaddr=00:10:67:20:80:30
+filesize=2CD658
+fileaddr=82000000
+gatewayip=192.168.0.10
+netmask=255.255.255.0
+ipaddr=192.168.0.8
+serverip=192.168.0.26
+bootargs=mem=32M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=jffs2 mtdparts=hi_sfc:768K(boot),3M(kernel),8448K(rootfs),4096K(bak)
+bootcmd=mw 200f0038 0;mw 20180400 8;mw 20180038 1;mw 0x200f012c 0;mw 0x200f0130 0;mw 0x20140400 0x18;mw 2014012c 0x18;sf probe 0;sf read 0x81c00000 0xC0000 0x300000;bootm 0x81c00000
+stdin=serial
+stdout=serial
+stderr=serial
+verify=n
+ver=U-Boot 2010.06-svn30 (Sep 17 2015 - 10:44:09)
+
+Environment size: 614/262140 bytes
+snow # 

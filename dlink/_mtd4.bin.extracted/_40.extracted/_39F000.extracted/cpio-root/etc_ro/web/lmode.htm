@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Mobile Phone</title>
+<meta content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<meta http-equiv="Refresh" content="1; url=lmode.htm">
+</head>
+<body>
+<CENTER>
+<table bgcolor=black BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<tr>
+	<td><font color=white>%%CameraName();%%<br>%%Location();%%</font></td>
+	<td align=right valign=top nowrap>&nbsp;&nbsp;<font color=white>%%CurrentTime();%%</font></td>
+</tr>
+<tr>
+	<td colspan=2 align=center>
+    	<IMG SRC="image.jpg?cidx=%%ReGetIndex();%%" BORDER="0" width=%%PhoneVideoWidth();%% height=%%PhoneVideoHeight();%%>
+    </td>
+</tr>
+<tr>
+	<td colspan=2 align=center>
+    	&nbsp;<INPUT type="button" style="font-size: 10 pt; width=120" value="Snapshot" onclick="javascript:location.href='imode.htm'">
+    	&nbsp;<INPUT type="button" style="font-size: 10 pt; COLOR: red; width=120" value="Periodic Refresh" onclick="javascript:location.href='lmode.htm'">
+    </td>
+</tr>
+</table>
+</CENTER>
+</body>
+</html>

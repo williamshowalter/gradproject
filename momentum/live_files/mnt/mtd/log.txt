@@ -1,0 +1,158 @@
+reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:02:12] [reboot] cmd loop timeouted
+[1970-01-01 08:02:12] [reboot] no video
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:01:10] [dap2p] set wifi cb, essid:Syiqc02
+[1970-01-01 08:01:11] [netmgr] SaveWifiConfig
+[2016-02-20 08:31:39] [ntpclient] time changed
+[2016-02-20 08:31:50] [ntpclient] time changed
+[2016-02-22 20:32:27] [ntpclient] time changed
+[2016-02-24 08:32:48] [ntpclient] time changed
+[2016-02-25 20:33:10] [ntpclient] time changed
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:00:29] [reboot] reset, type=0
+Thu Jan  1 08:00:32 GMT 1970
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:01:22] [dap2p] set wifi cb, essid:CyberPunkLabyrinth_5G
+[1970-01-01 08:05:37] [dap2p] set wifi cb, essid:CyberPunkLabyrinth_5G
+[1970-01-01 08:06:09] [reboot] reset, type=0
+Thu Jan  1 08:06:12 GMT 1970
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:00:21] [dap2p] set wifi cb, essid:CyberPunkLabyrinth_5G
+[1970-01-01 08:01:01] [reboot] reset, type=0
+Thu Jan  1 08:01:04 GMT 1970
+[1970-01-01 08:00:12] [main] started
+[1970-01-01 08:00:21] [dap2p] set wifi cb, essid:CyberPunkLabyrinth
+[1970-01-01 08:00:22] [netmgr] SaveWifiConfig
+[2017-01-24 06:16:53] [ntpclient] time changed
+[2017-01-23 17:17:03] [ntpclient] time changed
+[1969-12-31 19:00:12] [main] started
+[2017-01-26 16:37:44] [ntpclient] time changed
+[2017-01-26 16:38:02] [ntpclient] time changed
+[1969-12-31 19:00:12] [main] started
+[2017-01-26 17:25:13] [ntpclient] time changed
+[2017-01-26 17:25:32] [ntpclient] time changed
+[1969-12-31 19:00:12] [main] started
+[2017-01-28 13:42:47] [ntpclient] time changed
+[2017-01-28 13:43:07] [ntpclient] time changed
+[1969-12-31 19:00:12] [main] started
+[2017-01-28 13:45:05] [ntpclient] time changed
+[1969-12-31 19:00:12] [main] started
+[2017-01-29 13:58:13] [ntpclient] time changed
+[2017-01-29 13:58:31] [ntpclient] time changed
+[1969-12-31 19:00:12] [main] started
+[2017-01-29 14:02:07] [ntpclient] time changed
+[2017-01-29 14:02:26] [ntpclient] time changed
+[1969-12-31 19:00:12] [main] started
+[2017-01-31 16:12:08] [ntpclient] time changed
+[2017-01-31 16:12:32] [ntpclient] time changed
+[1969-12-31 19:00:12] [main] started
+[2017-01-31 16:13:49] [ntpclient] time changed
+[2017-01-31 16:14:12] [ntpclient] time changed
+[1969-12-31 19:00:12] [main] started
+[2017-01-31 16:16:15] [ntpclient] time changed
+[2017-01-31 16:16:40] [ntpclient] time changed
+[1969-12-31 19:00:12] [main] started
+[2017-01-31 16:17:47] [ntpclient] time changed
+[2017-01-31 16:18:12] [ntpclient] time changed
